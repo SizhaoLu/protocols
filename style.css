@@ -1,0 +1,202 @@
+/* ---- Base ---- */
+:root {
+  --ink: #2b2b28;
+  --paper: #fbfaf7;
+  --rule: #dedad0;
+  --accent: #6b7f5b;   /* muted sage — nods to lab/biology without being cute */
+  --accent-dark: #4f5f44;
+  --code-bg: #f1efe8;
+  --max-width: 760px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  font-size: 18px;
+  line-height: 1.65;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 4rem;
+}
+
+/* ---- Headings ---- */
+h1, h2, h3, h4 {
+  font-family: "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 600;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+}
+
+h1 {
+  font-size: 2rem;
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 0.4rem;
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  font-size: 1.4rem;
+  margin-top: 2.2rem;
+  color: var(--accent-dark);
+}
+
+h3 {
+  font-size: 1.15rem;
+  margin-top: 1.8rem;
+}
+
+#postamble h2 {
+  display: none; /* org sometimes wraps postamble title; hide if present */
+}
+
+/* ---- Links ---- */
+a {
+  color: var(--accent-dark);
+  text-decoration: none;
+  border-bottom: 1px solid var(--rule);
+}
+
+a:hover {
+  border-bottom-color: var(--accent-dark);
+}
+
+/* ---- Lists ---- */
+ul, ol {
+  padding-left: 1.4rem;
+}
+
+li {
+  margin-bottom: 0.3rem;
+}
+
+/* ---- Code ---- */
+code, pre {
+  font-family: "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.88em;
+}
+
+code {
+  background: var(--code-bg);
+  padding: 0.15em 0.4em;
+  border-radius: 3px;
+}
+
+pre {
+  background: var(--code-bg);
+  padding: 1rem 1.2rem;
+  border-radius: 6px;
+  overflow-x: auto;
+  border-left: 3px solid var(--accent);
+  line-height: 1.5;
+}
+
+pre code {
+  background: none;
+  padding: 0;
+}
+
+/* ---- Tables ---- */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1.2rem 0;
+  font-size: 0.95em;
+}
+
+th, td {
+  border-bottom: 1px solid var(--rule);
+  padding: 0.5rem 0.8rem;
+  text-align: left;
+}
+
+th {
+  font-family: "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 600;
+  color: var(--accent-dark);
+}
+
+/* ---- Images ---- */
+img {
+  max-width: 100%;
+  border-radius: 4px;
+  margin: 1rem 0;
+}
+
+.figure {
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+.figure p {
+  font-size: 0.85em;
+  color: #6b6760;
+  font-style: italic;
+}
+
+/* ---- Table of contents ---- */
+#table-of-contents {
+  background: var(--code-bg);
+  border-radius: 6px;
+  padding: 1rem 1.5rem;
+  margin-bottom: 2rem;
+}
+
+#table-of-contents h2 {
+  margin-top: 0;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--accent-dark);
+}
+
+#table-of-contents ul {
+  margin: 0;
+}
+
+/* ---- Postamble / footer ---- */
+#postamble {
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--rule);
+  font-size: 0.8em;
+  color: #8a8678;
+  font-family: "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+}
+
+/* ---- Sitemap pages (auto-generated index lists) ---- */
+ul.org-ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul.org-ul li {
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+ul.org-ul li a {
+  font-size: 1.05em;
+  font-weight: 600;
+  border-bottom: none;
+}
+
+/* ---- Mobile ---- */
+@media (max-width: 600px) {
+  body {
+    font-size: 16.5px;
+    padding: 1.5rem 1rem 3rem;
+  }
+  h1 {
+    font-size: 1.6rem;
+  }
+}
