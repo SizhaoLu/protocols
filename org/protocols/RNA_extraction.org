@@ -6,24 +6,24 @@
 - 75% Ethanol
 - RNAase free water
 * Notes
-- Use RNAase free solutions and tubes
-- Perform all steps at room temperature unless otherwise noted
-- Optimal amount of input tissue/cell (for 1mL TRIzol)
-   - 5-10x10^6 cells (10cm dish)
-   - 30–80 mg of tissue
-     - Mouse Kidney: 40-50 mg
-     - Mouse liver: 20-30 mg
-   - Sample volume should not exceed 25% of the volume of TRIzol
+1. Use RNAase free solutions and tubes
+2. Perform all steps at room temperature unless otherwise noted
+3. Optimal amount of input tissue/cell (for 1mL TRIzol)
+   1. 5-10x10^6 cells (10cm dish)
+   2. 30–80 mg of tissue
+      - Mouse Kidney: 40-50 mg
+      - Mouse liver: 20-30 mg
+   3. Sample volume should not exceed 25% of the volume of TRIzol
 * Procedures
 1. Tissue/cell processing
-   - Trypsinize cells and wash twice in PBS
-   - Tissue homognization
-     - Pre-chill a clean mortar and pestle on dry ice
-     - Slowly grind the tissue into a fine powder
-     - Transfer optimal amount of the powder into pre-chilled tubes
-     - Add 1 mL of TRIzol to the powder
-     - Pass the lysate through a 20G needle, then a 23G needle, 10 times each
-       - /This step might be optional./
+   1. Trypsinize cells and wash twice in PBS
+   2. Tissue homognization
+      1. Pre-chill a clean mortar and pestle on dry ice
+      2. Slowly grind the tissue into a fine powder
+      3. Transfer optimal amount of the powder into pre-chilled tubes
+      4. Add 1 mL of TRIzol to the powder
+      5. Pass the lysate through a 20G needle, then a 23G needle, 10 times each
+	 - /This step might be optional./
 2. Incubate tissue/cell in TRIzol solution for 5 min
    - The solution may turn viscous due to DNA content
 3. Add 200 μL chloroform for every mL of TRIzol.  Shake the samples
@@ -57,18 +57,18 @@
     - Adjust depending on the size of pellet.
 12. Incubate in a water bath or heat block set at 55–60°C for 10–15 minutes.
 * Tips and troubleshooting
-- There are 3 steps where the RNA isolation can be interrupted and RNA
+1. There are 3 steps where the RNA isolation can be interrupted and RNA
   can be stored until further isolation.  However, try to isolate it
   in one step to avoid degradation.
-  - After adding TRIzol and before adding chloroform. Store at –70℃
-     up to a few months (see step 3 above).
-  - After adding Isopropanol to the aqueous phase. Store it at 4℃,
-   only overnight. Do not store any colder because the salts will
-   precipitate out (see step 7 above).
-  - After precipitation and adding 75% Ethanol. In 75% Ethanol, RNA can
-  be stored up to a week at 4℃ or a few months at –20℃ (see step 10
-  above).
-- RNA QC with Nanodrop
-  - Pure RNA should have 260/280 ratio close to 2
-  - Low 260/230 ratio could be due to residual guanidine
-    thiocyanate. See /step 9/ under /Procedures/ for additional washes
+   1. After adding TRIzol and before adding chloroform. Store at –70℃
+	up to a few months (see step 3 above).
+   2. After adding Isopropanol to the aqueous phase. Store it at 4℃,
+     only overnight. Do not store any colder because the salts will
+     precipitate out (see step 7 above).
+   3. After precipitation and adding 75% Ethanol. In 75% Ethanol, RNA can
+   be stored up to a week at 4℃ or a few months at –20℃ (see step 10
+   above).
+2. RNA QC with Nanodrop
+   1. Pure RNA should have 260/280 ratio close to 2
+   2. Low 260/230 ratio could be due to residual guanidine
+      thiocyanate. See /step 9/ under /Procedures/ for additional washes
