@@ -6,28 +6,29 @@
 - 75% Ethanol
 - RNAase free water
 * Notes
-1. Use RNAase free solutions and tubes
-2. Perform all steps at room temperature unless otherwise noted
-3. Optimal amount of input tissue/cell (for 1mL TRIzol)
-   1. 5-10x10^6 cells (10cm dish)
-   2. 30–80 mg of tissue
-      - Mouse Kidney: 40-50 mg
-      - Mouse liver: 20-30 mg
-   3. Sample volume should not exceed 25% of the volume of TRIzol
+** Use RNAase free solutions and tubes
+** Perform all steps at room temperature unless otherwise noted
+** Optimal amount of input tissue/cell (for 1mL TRIzol)
+*** 5-10x10^6 cells (10cm dish)
+*** 30–80 mg of tissue
+- Mouse Kidney: 40-50 mg
+- Mouse liver: 20-30 mg
+- Sample volume should not exceed 25% of the volume of TRIzol
 * Procedures
 1. Tissue/cell processing
-   1. Trypsinize cells and wash twice in PBS
-   2. Tissue homognization
-      1. Pre-chill a clean mortar and pestle on dry ice
-      2. Slowly grind the tissue into a fine powder
-      3. Transfer optimal amount of the powder into pre-chilled tubes
-      4. Add 1 mL of TRIzol to the powder
-      5. Pass the lysate through a 20G needle, then a 23G needle, 10 times each
-	 - /This step might be optional./
+   - Trypsinize cells and wash twice in PBS
+   - Tissue homognization
+     1) Pre-chill a clean mortar and pestle on dry ice
+     2) Slowly grind the tissue into a fine powder
+     3) Transfer optimal amount of the powder into pre-chilled tubes
+     4) Add 1 mL of TRIzol to the powder
+     5) Pass the lysate through a 20G needle, then a 23G needle, 10
+        times each
 2. Incubate tissue/cell in TRIzol solution for 5 min
    - The solution may turn viscous due to DNA content
 3. Add 200 μL chloroform for every mL of TRIzol.  Shake the samples
-   vigorously for 15 sec to mix (*do not vortex*). Incubate for 2-3 min
+   vigorously for 15 sec to mix (*do not vortex*). Incubate for 2-3
+   min
 4. Centrifuge samples 15 min. at 12, 000xg at 4℃. /Centrifuging cold
    yields better phase separation/
    - The mixture separates into a lower phenol-chloroform, an
@@ -48,9 +49,9 @@
    - The wash can be repeated to futher remove residual guanidine
      thiocyanate
 10. Vacuum or air dry the RNA pellet for 5–10 minutes
-    - Do not overdry the RNA pellet. (When sufficiently dried, the pelet
-      should appear whitish. If pelet is clear, it indicates that it has
-      been overdried).
+    - Do not overdry the RNA pellet. (When sufficiently dried, the
+      pelet should appear whitish. If pelet is clear, it indicates
+      that it has been overdried).
 11. Resuspend the pellet in 30-200 μL of RNase-free water.
     - 150-200 μL for tissue
     - 30-50 μL for cells
@@ -58,17 +59,17 @@
 12. Incubate in a water bath or heat block set at 55–60°C for 10–15 minutes.
 * Tips and troubleshooting
 1. There are 3 steps where the RNA isolation can be interrupted and RNA
-  can be stored until further isolation.  However, try to isolate it
-  in one step to avoid degradation.
-   1. After adding TRIzol and before adding chloroform. Store at –70℃
-	up to a few months (see step 3 above).
-   2. After adding Isopropanol to the aqueous phase. Store it at 4℃,
-     only overnight. Do not store any colder because the salts will
-     precipitate out (see step 7 above).
-   3. After precipitation and adding 75% Ethanol. In 75% Ethanol, RNA can
-   be stored up to a week at 4℃ or a few months at –20℃ (see step 10
-   above).
+  can be stored until further isolation. However, try to isolate it in
+  one step to avoid degradation.
+   1) After adding TRIzol and before adding chloroform. Store at –70℃ up
+     to a few months (see /step 3/).
+   2) After adding Isopropanol to the aqueous phase. Store it at 4℃,
+      only overnight. Do not store any colder because the salts will
+      precipitate out (see /step 7/).
+   3) After precipitation and adding 75% Ethanol. In 75% Ethanol, RNA
+      can be stored up to a week at 4℃ or a few months at –20℃ (see
+      /step 10/).
 2. RNA QC with Nanodrop
-   1. Pure RNA should have 260/280 ratio close to 2
-   2. Low 260/230 ratio could be due to residual guanidine
-      thiocyanate. See /step 9/ under /Procedures/ for additional washes
+   - Pure RNA should have 260/280 ratio close to 2
+   - Low 260/230 ratio could be due to residual guanidine
+     thiocyanate. See /step 9/ for additional washes
