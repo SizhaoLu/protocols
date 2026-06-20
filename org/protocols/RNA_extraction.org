@@ -9,10 +9,10 @@
 - Use RNAase free solutions and tubes
 - Perform all steps at room temperature unless otherwise noted
 - Optimal amount of input tissue/cell (for 1mL TRIzol)
-  - 5-10x10^6 cells (10cm dish)
-  - 30–80 mg of tissue
-    - Mouse Kidney: 40-50 mg
-    - Mouse liver: 20-30 mg
+  1. 5-10x10^6 cells (10cm dish)
+  2. 30–80 mg of tissue
+     - Mouse Kidney: 40-50 mg
+     - Mouse liver: 20-30 mg
 - Sample volume should not exceed 25% of the volume of TRIzol
 * Procedures
 1. Tissue/cell processing
@@ -70,6 +70,6 @@
      can be stored up to a week at 4℃ or a few months at –20℃ (see
      /step 10/).
 - RNA QC with Nanodrop
-  - Pure RNA should have 260/280 ratio close to 2.0.
-  - Low 260/230 ratio could be due to residual guanidine
-    thiocyanate. See /step 9/ for additional washes.
+  1. Pure RNA should have 260/280 ratio close to 2.0.
+  2. Low 260/230 ratio could be due to residual guanidine
+     thiocyanate. See /step 9/ for additional washes.
