@@ -31,7 +31,6 @@ body {
 /* ---- Headings ---- */
 h1, h2, h3, h4 {
   font-family: "Avenir Next", "Helvetica Neue", Arial, sans-serif;
-  font-weight: 600;
   color: var(--ink);
   letter-spacing: -0.01em;
   line-height: 1.25;
@@ -39,6 +38,7 @@ h1, h2, h3, h4 {
 
 h1 {
   font-size: 2rem;
+  font-weight: 700;
   border-bottom: 2px solid var(--accent);
   padding-bottom: 0.4rem;
   margin-bottom: 1.5rem;
@@ -46,13 +46,21 @@ h1 {
 
 h2 {
   font-size: 1.4rem;
+  font-weight: 600;
   margin-top: 2.2rem;
   color: var(--accent-dark);
 }
 
 h3 {
   font-size: 1.15rem;
+  font-weight: 500;
   margin-top: 1.8rem;
+}
+
+h4 {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 1.5rem;
 }
 
 #postamble h2 {
@@ -72,11 +80,48 @@ a:hover {
 
 /* ---- Lists ---- */
 ul, ol {
-  padding-left: 1.4rem;
+  padding-left: 1.6rem;
+  margin: 0.4rem 0;
 }
 
 li {
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.4rem;
+}
+
+/* Distinguish nesting depth with different bullet styles */
+ul {
+  list-style-type: disc;
+}
+
+ul ul {
+  list-style-type: circle;
+}
+
+ul ul ul {
+  list-style-type: square;
+}
+
+ol ul,
+ul ol {
+  margin-top: 0.3rem;
+}
+
+/* Nested lists get a visible left rule to anchor depth visually */
+li > ul,
+li > ol {
+  border-left: 2px solid var(--rule);
+  padding-left: 1.2rem;
+  margin-left: 0.2rem;
+}
+
+/* Slightly mute deeper levels so the eye reads hierarchy, not just indent */
+li li {
+  color: #44443f;
+}
+
+li li li {
+  color: #5a5950;
+  font-size: 0.96em;
 }
 
 /* ---- Code ---- */
