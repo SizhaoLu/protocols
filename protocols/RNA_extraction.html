@@ -6,7 +6,7 @@
 <!-- 2026-06-20 Sat 05:12 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Protocols and Code Snippets</title>
+<title>RNA Extraction with TRIzol</title>
 <meta name="generator" content="Org Mode" />
 <style>
   #content { max-width: 60em; margin: auto; }
@@ -192,27 +192,122 @@
     { background-color: #ffff00; color: #000000; font-weight: bold; }
   .org-svg { }
 </style>
-<link rel="stylesheet" href="style.css" type="text/css"/>
+<link rel="stylesheet" href="../style.css" type="text/css"/>
 </head>
 <body>
 <div id="content" class="content">
-<h1 class="title">Protocols and Code Snippets</h1>
-
-<div id="outline-container-org8776383" class="outline-2">
-<h2 id="org8776383"><a href="protocols/index.html">Protocols</a></h2>
-<div class="outline-text-2" id="text-org8776383">
-<p>
-Wet lab protocols.
-</p>
+<h1 class="title">RNA Extraction with TRIzol</h1>
+<div id="outline-container-org7885fd9" class="outline-2">
+<h2 id="org7885fd9">Reagents</h2>
+<div class="outline-text-2" id="text-org7885fd9">
+<ul class="org-ul">
+<li>TRIzol reagent (invitrogen: Cat# 15596018)</li>
+<li>Isopropanol</li>
+<li>75% Ethanol</li>
+<li>RNAase free water</li>
+</ul>
 </div>
 </div>
-
-<div id="outline-container-org8d2791b" class="outline-2">
-<h2 id="org8d2791b"><a href="snippets/index.html">Code Snippets</a></h2>
-<div class="outline-text-2" id="text-org8d2791b">
-<p>
-Reusable scripts and code for data analysis.
-</p>
+<div id="outline-container-org8193bc4" class="outline-2">
+<h2 id="org8193bc4">Notes</h2>
+<div class="outline-text-2" id="text-org8193bc4">
+<ul class="org-ul">
+<li>Use RNAase free solutions and tubes</li>
+<li>Perform all steps at room temperature unless otherwise noted</li>
+<li>Optimal amount of input tissue/cell (for 1mL TRIzol)
+<ul class="org-ul">
+<li>5-10x10<sup>6</sup> cells (10cm dish)</li>
+<li>30–80 mg of tissue
+<ul class="org-ul">
+<li>Mouse Kidney: 40-50 mg</li>
+<li>Mouse liver: 20-30 mg</li>
+</ul></li>
+<li>Sample volume should not exceed 25% of the volume of TRIzol</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org8648d02" class="outline-2">
+<h2 id="org8648d02">Procedures</h2>
+<div class="outline-text-2" id="text-org8648d02">
+<ol class="org-ol">
+<li>Tissue/cell processing
+<ul class="org-ul">
+<li>Trypsinize cells and wash twice in PBS</li>
+<li>Tissue homognization
+<ul class="org-ul">
+<li>Pre-chill a clean mortar and pestle on dry ice</li>
+<li>Slowly grind the tissue into a fine powder</li>
+<li>Transfer optimal amount of the powder into pre-chilled tubes</li>
+<li>Add 1 mL of TRIzol to the powder</li>
+<li>Pass the lysate through a 20G needle, then a 23G needle, 10 times each
+<ul class="org-ul">
+<li><i>This step might be optional.</i></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>Incubate tissue/cell in TRIzol solution for 5 min
+<ul class="org-ul">
+<li>The solution may turn viscous due to DNA content</li>
+</ul></li>
+<li>Add 200 μL chloroform for every mL of TRIzol.  Shake the samples
+vigorously for 15 sec to mix (<b>do not vortex</b>). Incubate for 2-3 min</li>
+<li>Centrifuge samples 15 min. at 12, 000xg at 4℃. <i>Centrifuging cold
+yields better phase separation</i>
+<ul class="org-ul">
+<li>The mixture separates into a lower phenol-chloroform, an
+interphase, and a colorless upper aqueous phase. RNA is in the
+aqueous phase.</li>
+</ul></li>
+<li>Transfer the <b>aqueous phase</b> containing the RNA to a new tube
+<ul class="org-ul">
+<li>Glycogen can be added to the aqueous phase for small amount of
+input to help visualize the pellet</li>
+</ul></li>
+<li>Precipitate the RNA by mixing with 0.5 ml of isopropanol for every
+ml of TRIzol used initially</li>
+<li>Mix tube by inverting and incubate for 10 minutes</li>
+<li>Centrifuge for 10 min at 12,000xg, at 4℃.
+<ul class="org-ul">
+<li>Discard supernatant</li>
+</ul></li>
+<li>Wash the RNA pellet with 1ml. 75% Ethanol for every ml TRIzol
+used. <b>Vortex the sample briefly</b>, then centrifuge for 5 minutes at
+7500 × g at 4°C.
+<ul class="org-ul">
+<li>Discard the supernatant</li>
+<li>The wash can be repeated to futher remove residual guanidine
+thiocyanate</li>
+</ul></li>
+<li>Vacuum or air dry the RNA pellet for 5–10 minutes
+<ul class="org-ul">
+<li>Do not overdry the RNA pellet. (When sufficiently dried, the pelet
+should appear whitish. If pelet is clear, it indicates that it has
+been overdried).</li>
+</ul></li>
+<li>Resuspend the pellet in 30-200 μL of RNase-free water.
+<ul class="org-ul">
+<li>150-200 μL for tissue</li>
+<li>30-50 μL for cells</li>
+<li>Adjust depending on the size of pellet.</li>
+</ul></li>
+<li>Incubate in a water bath or heat block set at 55–60°C for 10–15 minutes.</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org1496364" class="outline-2">
+<h2 id="org1496364">TIPS: There are 3 steps where the RNA isolation can be interrupted and RNA can be stored until further isolation.  However, try to isolate it in one step to avoid degradation.</h2>
+<div class="outline-text-2" id="text-org1496364">
+<ol class="org-ol">
+<li>After adding TRIzol and before adding chloroform. Store at –70℃ up
+to a few months (see step 3 above).</li>
+<li>After adding Isopropanol to the aqueous phase. Store it at 4℃,
+only overnight. Do not store any colder because the salts will
+precipitate out (see step 7 above).</li>
+<li>After precipitation and adding 75% Ethanol. In 75% Ethanol, RNA can
+be stored up to a week at 4℃ or a few months at –20℃ (see step 10
+above).</li>
+</ol>
 </div>
 </div>
 </div>

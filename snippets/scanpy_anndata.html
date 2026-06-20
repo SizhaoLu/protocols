@@ -6,7 +6,7 @@
 <!-- 2026-06-20 Sat 05:12 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Protocols and Code Snippets</title>
+<title>Python code for Scanpy and anndata manipulations</title>
 <meta name="generator" content="Org Mode" />
 <style>
   #content { max-width: 60em; margin: auto; }
@@ -192,27 +192,21 @@
     { background-color: #ffff00; color: #000000; font-weight: bold; }
   .org-svg { }
 </style>
-<link rel="stylesheet" href="style.css" type="text/css"/>
+<link rel="stylesheet" href="../style.css" type="text/css"/>
 </head>
 <body>
 <div id="content" class="content">
-<h1 class="title">Protocols and Code Snippets</h1>
-
-<div id="outline-container-org8776383" class="outline-2">
-<h2 id="org8776383"><a href="protocols/index.html">Protocols</a></h2>
-<div class="outline-text-2" id="text-org8776383">
-<p>
-Wet lab protocols.
-</p>
+<h1 class="title">Python code for Scanpy and anndata manipulations</h1>
+<div id="outline-container-org4f0aba2" class="outline-2">
+<h2 id="org4f0aba2">annotate anndata based on gene expression</h2>
+<div class="outline-text-2" id="text-org4f0aba2">
+<div class="org-src-container">
+<pre class="src src-python">gene = 'gene_symbol'
+adata.obs[f'{gene}_expression'] = 'Neg'
+adata_pos = adata[adata[: , gene].X &gt; 0.01, :]
+adata.obs.loc[adata_pos.obs.index.to_list(), f'{gene}_expression'] = 'Pos'
+</pre>
 </div>
-</div>
-
-<div id="outline-container-org8d2791b" class="outline-2">
-<h2 id="org8d2791b"><a href="snippets/index.html">Code Snippets</a></h2>
-<div class="outline-text-2" id="text-org8d2791b">
-<p>
-Reusable scripts and code for data analysis.
-</p>
 </div>
 </div>
 </div>
