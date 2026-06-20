@@ -1,0 +1,9 @@
+#+OPTIONS: toc:nil
+#+TITLE: Python code for Scanpy and anndata manipulations
+* annotate anndata based on gene expression
+#+begin_src python
+  gene = 'gene_symbol'
+  adata.obs[f'{gene}_expression'] = 'Neg'
+  adata_pos = adata[adata[: , gene].X > 0.01, :]
+  adata.obs.loc[adata_pos.obs.index.to_list(), f'{gene}_expression'] = 'Pos'
+#+end_src
