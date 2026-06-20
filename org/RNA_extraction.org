@@ -1,0 +1,67 @@
+#+OPTIONS: toc:nil
+#+TITLE: RNA Extraction with TRIzol
+* Reagents
+- TRIzol reagent (invitrogen: Cat# 15596018)
+- Isopropanol
+- 75% Ethanol
+- RNAase free water
+* Notes
+- Use RNAase free solutions and tubes
+- Perform all steps at room temperature unless otherwise noted
+- Optimal amount of input tissue/cell (for 1mL TRIzol)
+   - 5-10x10^6 cells (10cm dish)
+   - 30–80 mg of tissue
+     - Mouse Kidney: 40-50 mg
+     - Mouse liver: 20-30 mg
+   - Sample volume should not exceed 25% of the volume of TRIzol
+* Procedures
+1. Tissue/cell processing
+   - Trypsinize cells and wash twice in PBS
+   - Tissue homognization
+     - Pre-chill a clean mortar and pestle on dry ice
+     - Slowly grind the tissue into a fine powder
+     - Transfer optimal amount of the powder into pre-chilled tubes
+     - Add 1 mL of TRIzol to the powder
+     - Pass the lysate through a 20G needle, then a 23G needle, 10 times each
+       - /This step might be optional./
+2. Incubate tissue/cell in TRIzol solution for 5 min
+   - The solution may turn viscous due to DNA content
+3. Add 200 μL chloroform for every mL of TRIzol.  Shake the samples
+   vigorously for 15 sec to mix (*do not vortex*). Incubate for 2-3 min
+4. Centrifuge samples 15 min. at 12, 000xg at 4℃. /Centrifuging cold
+   yields better phase separation/
+   - The mixture separates into a lower phenol-chloroform, an
+     interphase, and a colorless upper aqueous phase. RNA is in the
+     aqueous phase.
+5. Transfer the *aqueous phase* containing the RNA to a new tube
+   - Glycogen can be added to the aqueous phase for small amount of
+     input to help visualize the pellet
+6. Precipitate the RNA by mixing with 0.5 ml of isopropanol for every
+   ml of TRIzol used initially
+7. Mix tube by inverting and incubate for 10 minutes
+8. Centrifuge for 10 min at 12,000xg, at 4℃.
+   - Discard supernatant
+9. Wash the RNA pellet with 1ml. 75% Ethanol for every ml TRIzol
+   used. *Vortex the sample briefly*, then centrifuge for 5 minutes at
+   7500 × g at 4°C.
+   - Discard the supernatant
+   - The wash can be repeated to futher remove residual guanidine
+     thiocyanate
+10. Vacuum or air dry the RNA pellet for 5–10 minutes
+    - Do not overdry the RNA pellet. (When sufficiently dried, the pelet
+      should appear whitish. If pelet is clear, it indicates that it has
+      been overdried).
+11. Resuspend the pellet in 30-200 μL of RNase-free water.
+    - 150-200 μL for tissue
+    - 30-50 μL for cells
+    - Adjust depending on the size of pellet.
+12. Incubate in a water bath or heat block set at 55–60°C for 10–15 minutes.
+* TIPS: There are 3 steps where the RNA isolation can be interrupted and RNA can be stored until further isolation.  However, try to isolate it in one step to avoid degradation.
+1. After adding TRIzol and before adding chloroform. Store at –70℃ up
+   to a few months (see step 3 above).
+2. After adding Isopropanol to the aqueous phase. Store it at 4℃,
+   only overnight. Do not store any colder because the salts will
+   precipitate out (see step 7 above).
+3. After precipitation and adding 75% Ethanol. In 75% Ethanol, RNA can
+   be stored up to a week at 4℃ or a few months at –20℃ (see step 10
+   above).

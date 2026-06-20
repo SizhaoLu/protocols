@@ -1,0 +1,44 @@
+# ---- Emacs ----
+*~
+\#*\#
+.\#*
+*.elc
+auto-save-list
+tramp
+.org-id-locations
+*_archive
+
+# Flymake/flycheck
+flycheck_*.el
+
+# eshell
+/eshell/history
+/eshell/lastdir
+
+# elpa packages (if you don't vendor them)
+/elpa/
+
+# projectile/desktop save state
+.projectile
+*.desktop
+*.desktop.lock
+
+# ---- Org mode ----
+.org-id-locations
+*_archive
+*.org_archive
+
+# Org export intermediates (if you sometimes export locally with extra backends)
+*.tex
+*.pdf
+!org/**/*.pdf   # keep PDFs that are actually attachments inside org/, if any
+
+# Babel-generated temp files
+*.org.html~
+
+# ---- Build output (this repo's published site) ----
+/public/
+
+# ---- OS cruft ----
+.DS_Store
+Thumbs.db
