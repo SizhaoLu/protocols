@@ -1,0 +1,38 @@
+#+OPTIONS: toc:nil
+#+TITLE: RNA Extraction with Spin Columns
+* Reagents
+- RNeasy® Mini Kit (Qiagen Cat# 74106).
+- *Buffer RLT* (add β-mercaptoethanol at 10 µL per 1 mL if working with RNase-rich tissues): 350 µL per sample.
+- *70% ethanol* prepared with RNase-free H₂O: 350 µL per sample.
+- *Buffer RPE*: Add ethanol as directed when opening a new kit.
+  
+* Note
+- A 6-well plate is usually used for /in vitro/ experiments, with
+  200,000–300,000 cells per well.
+
+* Procedure
+1. Add 350 µL Buffer RLT to the cell culture plate and scrape off the
+   cells.
+2. Transfer the lysate to a QIAshredder column (Qiagen Cat# 79656).
+3. Centrifuge at 20,000 × g for 2 minutes and collect the
+   flow-through.
+4. Transfer the lysate to a gDNA Eliminator column and centrifuge at
+   8,000 × g for 1 minute. Keep the flow-through in the collection
+   tube and discard the column.
+5. Add 350 µL of 70% ethanol and mix thoroughly by pipetting.
+6. Transfer up to 700 µL of sample to an RNeasy Mini spin column.
+7. Centrifuge at 8,000 × g for 15 seconds. Discard the flow-through.
+8. Add 700 µL Buffer RW1. Centrifuge at 8,000 × g for 15 seconds and
+   discard the flow-through.
+9. Add 500 µL Buffer RPE. Centrifuge at 8,000 × g for 15 seconds and
+   discard the flow-through.
+10. Add another 500 µL Buffer RPE. Centrifuge at 8,000 × g for 2
+    minutes.
+11. Without disturbing the flow-through, place the column into a new 2
+    mL collection tube and centrifuge at 20,000 × g for 1 minute to
+    dry the membrane.
+12. Transfer the column to a new 1.5 mL microcentrifuge tube. Add 30
+    µL RNase-free water directly to the membrane and centrifuge at
+    8,000 × g for 1 minute.
+13. Collect and label the tubes.
+14. Place RNA on ice while preparing for cDNA synthesis, or store at -20°C.
