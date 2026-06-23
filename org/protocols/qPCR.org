@@ -1,0 +1,76 @@
+#+OPTIONS: toc:nil
+#+TITLE: Reverse Transcription and qPCR
+* Reagents
+- qScript Ultra SuperMix (Quanta Cat# 95217)
+- PowerUP SYBR Green Master Mix (Applied Biosystems Cat# A25742)
+- RNAase-free water
+* Notes
+- This protocol uses a scaled-down 10 µL reaction volume (half of the
+  manufacturer's recommendation). A 10 µL cDNA reaction is typically
+  sufficient for testing up to 18 genes by qPCR.
+- Use 200 ng to 1 µg of input RNA (typically ~0.5 µg).
+- Measure RNA concentration using a NanoDrop spectrophotometer.
+* Procedure
+** cDNA Synthesis
+- Reaction Composition (10 µL Total Volume)
+  1. Input RNA: X µL
+  2. Quanta mix: 2 µL
+  3. RNase-free water: (10 - 2 - X) µL
+
+- Reverse Transcription Program
+  1. 25°C for 2 minutes
+  2. 55°C for 10 minutes
+  3. 95°C for 1 minute
+  4. Hold at 4°C
+
+- Tips
+  1. cDNA may be stored at -20°C before proceeding to qPCR.
+  2. Add water first in the mix and rinse everything else (RNA and
+     cDNA enzyme mix) into the water
+
+** cDNA Dilution
+- Example dilution (12 Samples)
+  1. Prepare a 1:5 standard by combining 2 µL from each RT reaction
+     (24 µL total) with 96 µL water to obtain 120 µL.
+  2. Prepare a 1:10 standard by mixing 40 µL of the 1:5 standard with
+     40 µL water.
+  3. Prepare 1:50 and 1:100 standards by diluting the 1:5 and 1:10
+     standards, respectively (8 µL sample + 72 µL water).
+  4. Similarly, prepare 1:500 and 1:1000 standards from the 1:50 and
+     1:100 standards.
+     - You should obtain approximately 72 µL of each standard dilution
+       from 1:5 through 1:1000.
+  5. Dilute samples 1:10 so they fall within the standard curve range.
+     - Example: dilute 7.5 µL stock cDNA to 75 µL total volume (67.5
+       µL water).
+  6. Because housekeeping genes (e.g., 18S rRNA or β-actin) are highly expressed, prepare 1:100 dilutions from the 1:10 samples:
+     - 1.5 µL of 1:10 diluted cDNA + 13.5 µL water.
+- Notes and tips
+  1. Proper dilution is essential for efficient PCR amplification.
+  2. The dilution step is intended to generate:
+     - Serially diluted standards (pooled from all samples).
+     - Diluted samples for target genes (typically 1:10 dilution).
+     - Diluted samples for housekeeping genes (e.g., 18S rRNA; typically 1:100 dilution).
+  3. Above is just a simplified dilution procedure. To maximize the
+     number of genes can be tested, dilute the cDNA as below.
+| Number of samples                   |    24 |    18 |    12 |     9 |     6 |
+|-------------------------------------+-------+-------+-------+-------+-------|
+| Total cDNA Volume                   |    10 |    10 |    10 |    10 |    10 |
+| cDNA Vol from each sample (for STD) |   1.2 |   1.5 |   2.1 |   2.6 |   3.4 |
+| H2O needed for 1:7.5 STD            | 187.2 | 175.5 | 163.8 | 152.1 | 132.6 |
+| 1:7.5 STD total volume              |   216 | 202.5 |   189 | 175.5 |   153 |
+| Volume of 1:7.5 needed for 1:15 STD |    72 |  67.5 |    63 |  58.5 |    51 |
+| H2O needed for 1:15 STD             |    72 |  67.5 |    63 |  58.5 |    51 |
+| 1:15 STD total volume               |   144 |   135 |   126 |   117 |   102 |
+| Serial Dilution STD                 |  14.4 |  13.5 |  12.6 |  11.7 |  10.2 |
+| Serial Dilution STD H2O             | 129.6 | 121.5 | 113.4 | 105.3 |  91.8 |
+| STD volume                          | 129.6 | 121.5 | 113.4 | 105.3 |  91.8 |
+| Sample volume left                  |   8.3 |     8 |   7.4 |   6.9 |   6.1 |
+| H2O needed for 1:15 samples         | 116.2 |   112 | 103.6 |  96.6 |  85.4 |
+| Sample volume after dilu            | 124.5 |   120 |   111 | 103.5 |  91.5 |
+** qPCR Plate Setup
+- Primers are typically ordered from IDT in lyophilized form.
+  - Resuspend to 100 µM (e.g., 18.1 nmol in 181 µL water).
+  - Dilute 1:10 to prepare a 10 µM working solution.
+- Prepare a master mix containing SYBR reagent and primers.
+- Add 17 µL of prepared master mix to each well, followed by 3 µL of diluted sample or standard.
