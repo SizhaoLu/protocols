@@ -6,7 +6,7 @@
 <!-- 2026-06-23 Tue 17:56 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Code Snippets</title>
+<title>Reverse Transcription and qPCR</title>
 <meta name="generator" content="Org Mode" />
 <style>
   #content { max-width: 60em; margin: auto; }
@@ -196,10 +196,265 @@
 </head>
 <body>
 <div id="content" class="content">
-<h1 class="title">Code Snippets</h1>
+<h1 class="title">Reverse Transcription and qPCR</h1>
+<div id="outline-container-org99e4679" class="outline-2">
+<h2 id="org99e4679">Reagents</h2>
+<div class="outline-text-2" id="text-org99e4679">
 <ul class="org-ul">
-<li><a href="scanpy_anndata.html">Python code for Scanpy and anndata manipulations</a></li>
+<li>qScript Ultra SuperMix (Quanta Cat# 95217)</li>
+<li>PowerUP SYBR Green Master Mix (Applied Biosystems Cat# A25742)</li>
+<li>RNAase-free water</li>
 </ul>
+</div>
+</div>
+<div id="outline-container-org8dd2f76" class="outline-2">
+<h2 id="org8dd2f76">Notes</h2>
+<div class="outline-text-2" id="text-org8dd2f76">
+<ul class="org-ul">
+<li>This protocol uses a scaled-down 10 µL reaction volume (half of the
+manufacturer's recommendation). A 10 µL cDNA reaction is typically
+sufficient for testing up to 18 genes by qPCR.</li>
+<li>Use 200 ng to 1 µg of input RNA (typically ~0.5 µg).</li>
+<li>Measure RNA concentration using a NanoDrop spectrophotometer.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org67ee04b" class="outline-2">
+<h2 id="org67ee04b">Procedure</h2>
+<div class="outline-text-2" id="text-org67ee04b">
+</div>
+<div id="outline-container-org6769ac6" class="outline-3">
+<h3 id="org6769ac6">cDNA Synthesis</h3>
+<div class="outline-text-3" id="text-org6769ac6">
+<ul class="org-ul">
+<li>Reaction Composition (10 µL Total Volume)
+<ol class="org-ol">
+<li>Input RNA: X µL</li>
+<li>Quanta mix: 2 µL</li>
+<li>RNase-free water: (10 - 2 - X) µL</li>
+</ol></li>
+
+<li>Reverse Transcription Program
+<ol class="org-ol">
+<li>25°C for 2 minutes</li>
+<li>55°C for 10 minutes</li>
+<li>95°C for 1 minute</li>
+<li>Hold at 4°C</li>
+</ol></li>
+
+<li>Tips
+<ol class="org-ol">
+<li>cDNA may be stored at -20°C before proceeding to qPCR.</li>
+<li>Add water first in the mix and rinse everything else (RNA and
+cDNA enzyme mix) into the water</li>
+</ol></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org3488978" class="outline-3">
+<h3 id="org3488978">cDNA Dilution</h3>
+<div class="outline-text-3" id="text-org3488978">
+<ul class="org-ul">
+<li>Example dilution (12 Samples)
+<ol class="org-ol">
+<li>Prepare a 1:5 standard by combining 2 µL from each RT reaction
+(24 µL total) with 96 µL water to obtain 120 µL.</li>
+<li>Prepare a 1:10 standard by mixing 40 µL of the 1:5 standard with
+40 µL water.</li>
+<li>Prepare 1:50 and 1:100 standards by diluting the 1:5 and 1:10
+standards, respectively (8 µL sample + 72 µL water).</li>
+<li>Similarly, prepare 1:500 and 1:1000 standards from the 1:50 and
+1:100 standards.
+<ul class="org-ul">
+<li>You should obtain approximately 72 µL of each standard dilution
+from 1:5 through 1:1000.</li>
+</ul></li>
+<li>Dilute samples 1:10 so they fall within the standard curve range.
+<ul class="org-ul">
+<li>Example: dilute 7.5 µL stock cDNA to 75 µL total volume (67.5
+µL water).</li>
+</ul></li>
+<li>Because housekeeping genes (e.g., 18S rRNA or β-actin) are highly expressed, prepare 1:100 dilutions from the 1:10 samples:
+<ul class="org-ul">
+<li>1.5 µL of 1:10 diluted cDNA + 13.5 µL water.</li>
+</ul></li>
+</ol></li>
+<li>Notes and tips
+<ol class="org-ol">
+<li>Proper dilution is essential for efficient PCR amplification.</li>
+<li>The dilution step is intended to generate:
+<ul class="org-ul">
+<li>Serially diluted standards (pooled from all samples).</li>
+<li>Diluted samples for target genes (typically 1:10 dilution).</li>
+<li>Diluted samples for housekeeping genes (e.g., 18S rRNA; typically 1:100 dilution).</li>
+</ul></li>
+<li>Above is just a simplified dilution procedure. To maximize the
+number of genes can be tested, dilute the cDNA as below.</li>
+</ol></li>
+</ul>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Number of samples</th>
+<th scope="col" class="org-right">24</th>
+<th scope="col" class="org-right">18</th>
+<th scope="col" class="org-right">12</th>
+<th scope="col" class="org-right">9</th>
+<th scope="col" class="org-right">6</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Total cDNA Volume</td>
+<td class="org-right">10</td>
+<td class="org-right">10</td>
+<td class="org-right">10</td>
+<td class="org-right">10</td>
+<td class="org-right">10</td>
+</tr>
+
+<tr>
+<td class="org-left">cDNA Vol from each sample (for STD)</td>
+<td class="org-right">1.2</td>
+<td class="org-right">1.5</td>
+<td class="org-right">2.1</td>
+<td class="org-right">2.6</td>
+<td class="org-right">3.4</td>
+</tr>
+
+<tr>
+<td class="org-left">H2O needed for 1:7.5 STD</td>
+<td class="org-right">187.2</td>
+<td class="org-right">175.5</td>
+<td class="org-right">163.8</td>
+<td class="org-right">152.1</td>
+<td class="org-right">132.6</td>
+</tr>
+
+<tr>
+<td class="org-left">1:7.5 STD total volume</td>
+<td class="org-right">216</td>
+<td class="org-right">202.5</td>
+<td class="org-right">189</td>
+<td class="org-right">175.5</td>
+<td class="org-right">153</td>
+</tr>
+
+<tr>
+<td class="org-left">Volume of 1:7.5 needed for 1:15 STD</td>
+<td class="org-right">72</td>
+<td class="org-right">67.5</td>
+<td class="org-right">63</td>
+<td class="org-right">58.5</td>
+<td class="org-right">51</td>
+</tr>
+
+<tr>
+<td class="org-left">H2O needed for 1:15 STD</td>
+<td class="org-right">72</td>
+<td class="org-right">67.5</td>
+<td class="org-right">63</td>
+<td class="org-right">58.5</td>
+<td class="org-right">51</td>
+</tr>
+
+<tr>
+<td class="org-left">1:15 STD total volume</td>
+<td class="org-right">144</td>
+<td class="org-right">135</td>
+<td class="org-right">126</td>
+<td class="org-right">117</td>
+<td class="org-right">102</td>
+</tr>
+
+<tr>
+<td class="org-left">Serial Dilution STD</td>
+<td class="org-right">14.4</td>
+<td class="org-right">13.5</td>
+<td class="org-right">12.6</td>
+<td class="org-right">11.7</td>
+<td class="org-right">10.2</td>
+</tr>
+
+<tr>
+<td class="org-left">Serial Dilution STD H2O</td>
+<td class="org-right">129.6</td>
+<td class="org-right">121.5</td>
+<td class="org-right">113.4</td>
+<td class="org-right">105.3</td>
+<td class="org-right">91.8</td>
+</tr>
+
+<tr>
+<td class="org-left">STD volume</td>
+<td class="org-right">129.6</td>
+<td class="org-right">121.5</td>
+<td class="org-right">113.4</td>
+<td class="org-right">105.3</td>
+<td class="org-right">91.8</td>
+</tr>
+
+<tr>
+<td class="org-left">Sample volume left</td>
+<td class="org-right">8.3</td>
+<td class="org-right">8</td>
+<td class="org-right">7.4</td>
+<td class="org-right">6.9</td>
+<td class="org-right">6.1</td>
+</tr>
+
+<tr>
+<td class="org-left">H2O needed for 1:15 samples</td>
+<td class="org-right">116.2</td>
+<td class="org-right">112</td>
+<td class="org-right">103.6</td>
+<td class="org-right">96.6</td>
+<td class="org-right">85.4</td>
+</tr>
+
+<tr>
+<td class="org-left">Sample volume after dilu</td>
+<td class="org-right">124.5</td>
+<td class="org-right">120</td>
+<td class="org-right">111</td>
+<td class="org-right">103.5</td>
+<td class="org-right">91.5</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-org45d4f37" class="outline-3">
+<h3 id="org45d4f37">qPCR Plate Setup</h3>
+<div class="outline-text-3" id="text-org45d4f37">
+<ul class="org-ul">
+<li>Primers are typically ordered from IDT in lyophilized form.
+<ul class="org-ul">
+<li>Resuspend to 100 µM (e.g., 18.1 nmol in 181 µL water).</li>
+<li>Dilute 1:10 to prepare a 10 µM working solution.</li>
+</ul></li>
+<li>Prepare a master mix containing SYBR reagent and primers.</li>
+<li>Add 17 µL of prepared master mix to each well, followed by 3 µL of diluted sample or standard.</li>
+</ul>
+</div>
+</div>
+</div>
 </div>
 <div id="postamble" class="status">
 <p>Last built: 2026-06-23 Tue 17:56</p>
