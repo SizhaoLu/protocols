@@ -53,9 +53,12 @@
       pelet should appear whitish. If pelet is clear, it indicates
       that it has been overdried).
 11. Resuspend the pellet in 30-200 μL of RNase-free water.
-    - 150-200 μL for tissue
+    - 100-200 μL for tissue
     - 30-50 μL for cells
     - Adjust depending on the size of pellet.
+    - Consider measure RNA concentration and adjust the volume so the
+      concentrations are not drastically different between the
+      samples.
 12. Incubate in a water bath or heat block set at 55–60°C for 10–15 minutes.
 * Tips and troubleshooting
 - There are 3 steps where the RNA isolation can be interrupted and RNA
