@@ -1,0 +1,97 @@
+#+OPTIONS: toc:nil
+#+TITLE: Immunofluorescence Staining with OCT Tissue
+
+* Overview
+This protocol describes indirect immunofluorescence staining of
+PFA-fixed, OCT-embedded frozen tissue sections (validated on
+mouse kidney).
+
+* Safety notes
+- Acetone is volatile and flammable; fix slides in a fume hood or
+  well-ventilated area, away from open flame.
+- Sudan Black B is a suspected carcinogen and an irritant; handle
+  with gloves and prepare/apply in a fume hood.
+
+* Materials/Equipment
+- Humidified chamber
+- Hydrophobic barrier pen
+- Coplin jars or slide staining dishes
+- Fume hood (for acetone fixation and Sudan Black step)
+
+* Reagents
+1. Acetone (-20°C)
+2. Phosphate-buffered saline (PBS)
+3. Blocking buffer: 1x PBS with 5% goat serum and 2% BSA
+4. Sudan Black B (0.05% in 70% ethanol) — filter before use to
+   remove precipitate; light-sensitive, store protected from light.
+5. DAPI (Invitrogen Cat#D1306)
+
+* Procedures
+1. Remove slides from storage (-80°C) and allow to warm to room
+   temperature for 5 min.
+2. Fix the slides in -20°C acetone. Incubate for 10 min, then air dry
+   until the acetone has fully evaporated.
+3. Wash the slides twice in 1x PBS, 5 min each.
+4. Dry the area around the tissue and apply a ring of hydrophobic
+   barrier. Allow the barrier to dry for 1 min.
+5. Block the slides with blocking buffer. Incubate in a humidified
+   chamber for 1 hour.
+   - Use about 100 μL per kidney section.
+   - Decant the blocking buffer after 1 hour.
+6. Without washing, apply diluted primary antibody to the tissue.
+   - Incubate in a humidified chamber at 4°C overnight.
+   - Protect from light if using conjugated antibodies.
+   - Need about 50 μL per mouse kidney section.
+7. Decant primary antibody solution.
+8. Wash with 1x PBS two times, 5 min each.
+9. Apply diluted secondary antibody. Incubate 1 hour at room
+   temperature in a humidified chamber, protected from light.
+   - Secondary antibodies are usually used at 1:500 dilution.
+10. Wash with 1x PBS three times, 5 min each, protected from light.
+11. Optional: DAPI staining
+    - The mounting media contains DAPI, but additional staining may
+      produce more uniform DAPI signal.
+    - Stock solution: 1 mg/mL (2.86 mM) in DI/MQ water.
+    - Dilute 2.86 mM stock to 300 μM: 31.47 μL DAPI + 268.53 μL PBS.
+    - Dilute the 300 μM intermediate solution 1:1000 in PBS to achieve
+      1x working concentration.
+    - Incubate for 5 min, protected from light.
+    - Wash with 1x PBS twice, 5 min each, before proceeding.
+12. Block endogenous autofluorescence with 0.05% Sudan Black B diluted
+    in 70% EtOH. Incubate for 10 minutes at room temperature,
+    protected from light.
+13. Wash slides twice with DI water, 10 min each.
+14. Mount and seal slides.
+
+* Tips and troubleshooting
+1. Antibody dilution information
+
+   Specificity abbreviations: H = human, M = mouse, R = rat.
+
+   | Antibody                   | Company     | Cat#       | Host   | Clone      | Specificity    | Conjugation | StockConc(mg/ml) | WorkConc(ug/ml) | Dilution | Note                                                   |
+   |----------------------------+-------------+------------+--------+------------+----------------+-------------+------------------+-----------------+----------+--------------------------------------------------------|
+   | Anti-Actin, α-SmoothMuscle | Sigma       | C6198      | Mouse  | 1A4        | HMR            | Cy3         | N/A              | N/A             |   1:2000 | 1 hour RT incubation                                   |
+   | Anti-GFP                   | Abcam       | ab290      | Rabbit | Polyclonal | N/A            | None        | 5                | N/A             |    1:200 |                                                        |
+   | Anti-GFP                   | Abcam       | ab6673     | Goat   | Polyclonal | N/A            | None        | N/A              | N/A             |    1:500 |                                                        |
+   | Anti-GFP                   | Abcam       | ab6662     | Goat   | Polyclonal | N/A            | FITC        | N/A              | N/A             |    1:200 |                                                        |
+   | Anti-tdTomato              | Kerafast    | EST203     | Rat    | EST203     | N/A            | None        | N/A              | N/A             |    1:200 |                                                        |
+   | Anti-mCherry               | Invitrogen  | MA5-14524  | Rat    | 16D7       | N/A            | None        | N/A              | N/A             |    1:100 | Cross-reacts with tdTomato                             |
+   | Anti-CD3                   | ProteinTech | 17617-1-AP | Rabbit | Polyclonal | HMR            | None        | N/A              | N/A             |    1:100 | Works well; requires antigen retrieval                 |
+   | Anti-CD4                   | Invitrogen  | 14-9766-82 | Rat    | 4SM95      | HM             | None        | N/A              | N/A             |    1:100 |                                                        |
+   | Anti-CD4                   | Biolegend   | 100401     | Rat    | GK1.5      | M              | None        | N/A              | N/A             |     1:25 | Ref: PMID 36092510                                     |
+   | Anti-GLUT1                 | Abcam       | ab115730   | Rabbit | EPR3915    | HMR            | None        | 0.161            | 1               |    1:160 |                                                        |
+   | Anti-CD68                  | BioRad      | MCA1957    | Rat    | FA-11      | Mouse          | None        | N/A              | N/A             |     1:50 |                                                        |
+   | Anti-F4/80                 | BioRad      | MCA497     | Rat    | Cl:A3-1    | Mouse          | None        | N/A              | N/A             |    1:100 |                                                        |
+   | Anti-C5b-9                 | Santa Cruz  | sc-58935   | Mouse  | aE11       | Human, porcine | None        | N/A              | N/A             |     1:75 |                                                        |
+   | Anti-HIF1a                 | Abcam       | ab179483   | Rabbit | EPR16897   | HMR            | None        | N/A              | N/A             |    1:500 |                                                        |
+   | Anti-PKM2                  | CST         | #4053      | Rabbit | N/A        | HMR            | None        | N/A              | N/A             |    1:100 |                                                        |
+   | Anti-Cxcr7                 | Abcam       | ab72100    | Rabbit | N/A        | HM             | None        | 1                | 10              |    1:100 |                                                        |
+   | Anti-Dnmt1                 | Abcam       | ab188453   | Rabbit | EPR18453   | HMR            | None        | N/A              | N/A             |    1:200 | Works well for cells; does not seem to work for tissue |
+
+2. Always include a negative control when possible.
+   - Pick the sample expected to have positive signal (i.e., an
+     isotype or secondary-only control run alongside a known-positive
+     tissue).
+3. When applying liquid, avoid pipetting directly onto the tissue, as
+   this may cause detachment. Instead, slowly pipet the liquid along
+   the side of the tissue section.
