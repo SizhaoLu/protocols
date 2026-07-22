@@ -3,7 +3,7 @@
 
 * Overview
 This protocol describes indirect immunofluorescence staining of
-PFA-fixed, OCT-embedded frozen tissue sections (validated on
+freshly OCT-embedded frozen tissue sections (validated on
 mouse kidney).
 
 * Safety notes
@@ -14,7 +14,6 @@ mouse kidney).
 
 * Materials/Equipment
 - Humidified chamber
-- Hydrophobic barrier pen
 - Coplin jars or slide staining dishes
 - Fume hood (for acetone fixation and Sudan Black step)
 
@@ -32,23 +31,26 @@ mouse kidney).
 2. Fix the slides in -20°C acetone. Incubate for 10 min, then air dry
    until the acetone has fully evaporated.
 3. Wash the slides twice in 1x PBS, 5 min each.
-4. Dry the area around the tissue and apply a ring of hydrophobic
-   barrier. Allow the barrier to dry for 1 min.
-5. Block the slides with blocking buffer. Incubate in a humidified
+4. Block the slides with blocking buffer. Incubate in a humidified
    chamber for 1 hour.
    - Use about 100 μL per kidney section.
    - Decant the blocking buffer after 1 hour.
-6. Without washing, apply diluted primary antibody to the tissue.
+5. Without washing, apply diluted primary antibody to the tissue.
+   - Cover the tissue with parafilm to prevent evaporations.
    - Incubate in a humidified chamber at 4°C overnight.
    - Protect from light if using conjugated antibodies.
    - Need about 50 μL per mouse kidney section.
-7. Decant primary antibody solution.
-8. Wash with 1x PBS two times, 5 min each.
-9. Apply diluted secondary antibody. Incubate 1 hour at room
+6. Decant primary antibody solution.
+   - If using parafilm method, sink the slide into a tank of DI water
+     to allow it to naturally flow and detach without damaging the
+     tissue.
+7. Wash with 1x PBS two times, 5 min each.
+8. Apply diluted secondary antibody. Incubate 1 hour at room
    temperature in a humidified chamber, protected from light.
    - Secondary antibodies are usually used at 1:500 dilution.
-10. Wash with 1x PBS three times, 5 min each, protected from light.
-11. Optional: DAPI staining
+   - Parafilm not needed for this step due to increased volume.
+9. Wash with 1x PBS three times, 5 min each, protected from light.
+10. Optional: DAPI staining
     - The mounting media contains DAPI, but additional staining may
       produce more uniform DAPI signal.
     - Stock solution: 1 mg/mL (2.86 mM) in DI/MQ water.
@@ -57,11 +59,11 @@ mouse kidney).
       1x working concentration.
     - Incubate for 5 min, protected from light.
     - Wash with 1x PBS twice, 5 min each, before proceeding.
-12. Block endogenous autofluorescence with 0.05% Sudan Black B diluted
+11. Block endogenous autofluorescence with 0.05% Sudan Black B diluted
     in 70% EtOH. Incubate for 10 minutes at room temperature,
     protected from light.
-13. Wash slides twice with DI water, 10 min each.
-14. Mount and seal slides.
+12. Wash slides twice with DI water, 10 min each.
+13. Mount and seal slides.
 
 * Tips and troubleshooting
 1. Antibody dilution information
