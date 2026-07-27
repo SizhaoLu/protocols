@@ -95,7 +95,7 @@ mouse kidney).
    | Anti-Aquaporin 2           | Santa Cruz      | sc-515770  | Mouse  | E-2        | HMR            | None        | 200μg/mL         |                 |    1:100 | IgG1κ Works well for OCT                               |
    | Anti-Aquaporin 2           | Santa Cruz      | sc-9882    | Mouse  | C-17       | HMR            | None        |                  |                 | 1:50-500 | Not tested                                             |
    | Anti-C3b                   | MP Biomedicals? | ?          | Goat   | ?          | Mouse          | FITC        |                  |                 |    1:650 | From Thurman group                                     |
-   | Anti-C3d                   | ?               | ?          | Mouse  | ?          | Mouse          | AF647       |                  |                 |    1:473 | From Thurman group                                     |
+   | Anti-C3d                   | ?               | ?          | Mouse  | 3d29       | Mouse          | AF647       |                  |                 |    1:473 | From Thurman group                                     |
 
 2. Always include a negative control when possible.
    - Pick the sample expected to have positive signal (i.e., an
