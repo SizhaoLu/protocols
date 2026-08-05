@@ -1,0 +1,210 @@
+#+OPTIONS: toc:nil
+#+TITLE: Western blotting
+* Protein Lysate Preparation
+- Make sure centrifuge is at 4 °C before starting
+- Wash cells twice with cold 1x PBS
+- Lysis buffer
+  - mPER (Thermo Scientific 78501) with supplement protease inhibitor
+    and phosphatase inhibitor (100x stocks in DMSO).
+  - Better results might be achieved with RIPA for nuclear proteins.
+
+** RIPA buffer
+
+| Component          | Stock Conc (mM or %) | Final Conc (mM or %) | Vol (mL) |
+|---------------------+-----------------------+-----------------------+----------|
+| Tris pH 7.4         |                  1000 |                    50 |      2.5 |
+| NaCl                |                  5000 |                   150 |      1.5 |
+| IGEPAL CA-630       |                   10% |                    1% |        5 |
+| Deoxycholic acid    |                    5% |                 0.50% |      2.5 |
+| SDS                 |                   10% |                 0.10% |      0.5 |
+| H2O                 |                       |                       |       38 |
+
+- Use 100-200 uL of lysis buffer for cells in 60 mm dish.
+- Use 300-500 uL of lysis buffer for cells in 100 mm dish
+- With lysis buffer added in the dish, scrape the cell off and move to EP tube.
+
+- Keep lysate cold at all times
+
+- Sonicate at 10% amplitude for 5 sec.
+- Incubate on ice for 10 min.
+- Centrifuge for 10 min at 14,000 RPM at 4 °C.
+- Aliquot the prepared lysate (~45 μL)
+
+* Gel and Sample Preparation
+
+- Pour gel of suitable percentage based on recipe (see [[Polyacrylamide gel]])
+- After pouring bottom gel (resolving) layer it with about 1ml of EtOH to get a sharp line when it polymerizes (takes about 20-30 min). Pour out the ethanol and wash it off with milli-Q water. Pour the stacking gel and let it sit at least 30 min before taking the comb out.
+- If protein amount is not known, do Bradford Assay with the samples to be loaded. Preferably, the protein concentration should be determined during lysate preparation. Measurements performed in different batches might not be directly comparable.
+  - Bradford Assay is generally performed with 96-well plate (transparent for measuring absorbance)
+  - Prepare standard with BSA (dissolve in lysis buffer) ranging from 2 mg/mL to 0.25 mg/mL.
+  - Use 18 uL H2O, 2 uL of lysate/standard plus 180 uL 1x bradford solution.
+  - Measure absorbance at 600 nm.
+- Calculate prepare lysate using excel template. Keep lysate on ice during the preparation
+- Boil lysate for 5min after adding DTT (1M stock) and sample buffer
+- During this time, set up the gel using 1x running buffer
+- Load 8-10 ul of protein ladder.
+- After samples are loaded, run the gel first at 80 V. After samples reach resolving (bottom) gel part, turn it up to 120 V until done.
+
+* Semi-Dry Transfer
+
+- During the gel run, prepare the transfer buffer.
+- Cut a PVDF membrane out (9.5 cm by 5cm) and notch the right hand corner and write on the right hand corner in pencil (helps remind what side the protein is on). Written side of the membrane will face the SDS-gel.
+- Place membrane in methanol for 5 min. Balance the membrane in 1x transfer buffer.
+- *PVDF membrane is hydrophobic. Make sure to soak in methanol first.*
+- Cut (match gel and membrane size) and soak two (for each gel) thick filter paper in transfer buffer.
+- Take gel out of apparatus and cut off the stacking. Cut a notch on the top left-hand corner.
+- Balance the gel in 1x transfer buffer for 5-10 min. Careful not to flip the membrane.
+- Assemble the transfer sandwich in the transfer instrument, in the order below (bottom to top).
+  - Thick filter paper
+  - PVDF (writing facing up, cut and writing on the top right corner)
+  - Gel (flip up side down, the cut corner on top right, align with the cut on the membrane)
+  - Thick filter paper
+- Roll out bubbles.
+- Cover the lid for the instrument. Transfer at 15v for 30 min. Time can be extended for larger protein.
+
+* Blocking and antibody incubations
+
+- Following transfer, wash the membrane in 1x [[10x TBS]] for 5 to 10 minutes with gentle agitation at room temperature twice.
+- Place membrane carefully in [[Blocking buffer]]. Gently agitate the solution and incubate for 1 hour at RT.
+- Incubate with primary antibody (see [[Antibodies dilution reference]]) overnight at 4 °C.
+- 6 mL of diluted antibody is needed if plastic pouch is used.
+
+- Next morning, wash the membrane four times with TBST for 5 min
+- Second antibody incubation – Prepare secondary antibody solution as follows:
+  - Odyssey secondaries can be used for detecting two (or more) proteins on the same blot
+
+| Cat#      | Host | Target | Conjugation  | Dilution |
+|-----------+------+--------+--------------+----------|
+| 926-32210 | Goat | Mouse  | IRDye® 800CW | 1:10,000 |
+| 926-68070 | Goat | Mouse  | IRDye® 680RD | 1:5,000  |
+| 926-32211 | Goat | Rabbit | IRDye® 800CW | 1:10,000 |
+| 926-68071 | Goat | Rabbit | IRDye® 680RD | 1:5,000  |
+
+#+begin_quote
+It is generally recommended that the IRDye 800CW secondary antibody (800 nm channel) be used to detect the lower-abundance protein target and IRDye 680RD secondary antibody (700nm) to detect the more abundant protein
+#+end_quote
+
+- Alternatively, HRP conjugated secondaries are available for chemiluminescence detection.
+
+| Name                 | Company        | Cat#        | Host   | Dilution |
+|----------------------+----------------+-------------+--------+----------|
+| Goat Anti-Mouse HRP  | jacksonimmuno  | 115-035-003 | Goat   | 1:10000  |
+| Goat Anti-rabbit HRP | Cell Signaling | #7074       | Goat   | 1:2000   |
+| Donkey Anti-Goat HRP | Novex          | A16005      | Donkey | 1:5000   |
+
+- Incubate at room temperature for 1 hour with agitation. Protect from light
+- Washes
+  - Wash four times with TBST for 5 min
+  - Rinse the membrane with TBS briefly to remove residual Tween 20.
+- Imaging with LI-COR Odyssey XF system.
+
+* Recipes for gels and buffers
+
+** Polyacrylamide gel
+
+| Reagents                    | Stacking | Resolving 7.5% | Resolving 10% | Resolving 12% |
+|------------------------------+----------+-----------------+----------------+----------------|
+| 30% Acrylamide/bis (mL)      |      1.3 |               5 |            6.6 |              8 |
+| 0.5M Tris-HCl, pH 6.8 (mL)   |      2.5 |               0 |              0 |              0 |
+| 1.5M Tris-HCl, pH 8.8 (mL)   |        0 |               5 |              5 |              5 |
+| 10% SDS (uL)                 |      100 |             200 |            200 |            200 |
+| H2O (mL)                     |      6.1 |             9.8 |            8.2 |            6.8 |
+| TEMED (uL)                   |       10 |              20 |             20 |             20 |
+| 10% APS (uL)                 |      100 |              64 |             64 |             64 |
+
+#+begin_quote
+This calculation is enough for 2 gels with 1.5mm spacer.
+10% APS is aliquoted in 200 uL and kept at -20 °C for 6-9 months.
+#+end_quote
+
+** 10x running buffer
+
+| Reagents | Concentration | Weight |
+|----------+----------------+--------|
+| glycine  | 192 mM         | 72g    |
+| Tris     | 25 mM          | 15.15g |
+| SDS      | 1%             | 5g     |
+| H2O      |                | 500 mL |
+
+#+begin_quote
+pH of the 10x running buffer should be 8.3 and no pH adjustment is required. Store the running buffer at room temperature and dilute to 1X before use.
+#+end_quote
+
+** 10x transfer buffer (Bjerrum Schafer-Nielsen)
+
+| Reagents | Concentration | Weight  |
+|----------+----------------+---------|
+| glycine  | 39 mM          | 29.3g   |
+| Tris     | 48 mM          | 58.2g   |
+| H2O      |                | 1000 mL |
+
+#+begin_quote
+pH for transfer buffer should be ~9.2. Do NOT add acid or base to adjust pH. For 1x buffer, add 100mL of 10x stock, 200 mL of Methanol to 700 mL of H2O
+#+end_quote
+
+** 10x TBS
+
+| Reagents | Weight |
+|----------+--------|
+| Tris-HCl | 24g    |
+| Tris     | 5.6g   |
+| NaCl     | 88g    |
+| H2O      | to 1L  |
+
+#+begin_quote
+PH should be around 7.6 (no need to adjust pH). Add Tween-20 to 0.2% in 1x TBS for TBST
+#+end_quote
+
+** Blocking buffer
+
+5% BSA in TBS
+
+** Antibody buffer
+
+Dilute blocking buffer 1:10 in TBST
+
+* Antibodies dilution reference
+
+| Antibody                  | Company        | Cat#        | Host   | Clone      | MW         | Dilution      | notes                          |
+|----------------------------+----------------+-------------+--------+------------+------------+---------------+---------------------------------|
+| Anti-β-Actin               | Sigma          | A5441       | Mouse  | AC-15      | 42 kDa     | 1:60000       |                                 |
+| Anti-GAPDH                 | millipore      | MAB374      | Mouse  | 6C5        | 38 kDa     | 1:4000        |                                 |
+| Phospho-Smad2/3            | Cell Signaling | #8828       | Rabbit | D27F4      | 52, 60 kDa | 1:1000        |                                 |
+| Phospho-Erk1/2             | Cell Signaling | #4377       | Rabbit | 197G2      | 42, 44 kDa | 1:1000        |                                 |
+| Anti-Smad7                 | Santa Cruz     | sc-365846   | Mouse  | B-8        | 46 kDa     | 1:600         |                                 |
+| Anti-KLF4                  | R&D Systems    | AF3158      | Goat   |            | 55 kda     | 1:2000        | Some strong nonspecific bands   |
+| Anti-Klf4                  | Santa Cruz     | sc-393462 x | Mouse  | B-8        | 55 kda     | 1:6000        | Some strong nonspecific bands   |
+| Anti-Klf4                  | Santa Cruz     | sc-166238 x | Mouse  | F-8        | 55 kda     | 1:6000        |                                 |
+| Anti-Klf4                  | Invitrogen     | PA5-27440   | Rabbit | Polyclonal | 55 kda     | 1:1000        | no diff between KO WT           |
+| Anti-Klf4                  | Cell Signaling | #4038       | Rabbit | Polyclonal | 65 kda     | 1:1000        |                                 |
+| Anti-aSMA                  | Abcam          | ab5694      | Rabbit |            | 42 kDa     | 1:60000       |                                 |
+| Anti-HDAC1                 | Cell Signaling | #34589      | Rabbit | D5C6U      | 62 kDa     | 1:1000        |                                 |
+| Anti-PKM2                  | Cell Signaling | #4053       | Rabbit | D78A4      | 60 kDa     | 1:1000        |                                 |
+| Anti-HIF1a                 | Abcam          | ab179483    | Rabbit | EPR16897   | 110 kDa    | 1:1000        |                                 |
+| Anti-PTEN                  | Cell Signaling | #9559       | Rabbit | 138G6      | 54 kDa     | 1:1000        |                                 |
+| Anti-Ezh2                  | Cell Signaling | 5246S       | Rabbit | D2C9       | 98         | 1:1000        |                                 |
+| Anti-Cxcr7                 | Abcam          | ab117836    | Rabbit |            | 41 kDa     | 1:1000        | Not working for WB?             |
+| Anti-SMMHC                 | Abcam          | ab125884    | Rabbit |            | 227 kDa    | 1:1000        |                                 |
+| Anti-Calponin 1/2/3        | Santa Cruz     | sc-28545    | Rabbit |            | 33-36 kDa  | 1:1000        |                                 |
+| Anti-Klf4                  | Cell Signaling | #4038S      | Rabbit |            | 65 kDa     | 1:1000        |                                 |
+| Anti-CXCR-7                | Abcam          | ab72100     | Rabbit |            | 42 kDa     | 1:200         | 4 - 6 µg/ml                     |
+| Anti-Phospho-Akt (Ser473)  | Cell Signaling | #4058       | Rabbit |            | 60 kDa     | 1:1000        |                                 |
+| Anti-Fibronectin           | Abcam          | ab2413      | Rabbit |            |            | 1:1000        |                                 |
+| Anti-PTEN                  | Cell Signaling | 14642S      | Mouse  | D3Q6G      | 54 kDa     | 1:1000        |                                 |
+| Anti-Phosphoserine         | Invitrogen     | MA1-91608   | Mouse  | 3C171      | NA         | 1:500         |                                 |
+| Anti-Dnmt1                 | Abcam          | ab188453    | Rabbit | EPR18453   | 183 kDa    | 1:1000        |                                 |
+| Anti-AKT                   | Cell Signaling | 9272        | Rabbit |            | 60 kDa     | 1:1000        |                                 |
+| Anti-Dnmt1                 | Cell Signaling | 5032S       | Rabbit | D63A6      | 200 kDa    | 1:1000        |                                 |
+| Anti-Tet2                  | Abcam          | ab124297    | Rabbit |            | 223 kDa    | 1:250         |                                 |
+| Anti-DNMT1                 | Invitrogen     | MA5-16169   | Mouse  | 60B1220.1  | 200 kDa    | 1:2000        | worked                          |
+| Anti-FN1                   | Abcam          | Ab2413      | Rabbit | Polyclonal | 272 kDa    | Try 1:50      | Concentration varies by lot, current lot is 24.22ug/mL |
+| Anti-FAP                   | Abcam          | Ab28244     | Rabbit | Polyclonal | 87.7 kDa   | 1:1000-1:5000 |                                 |
+| Anti-pSTAT3(Tyr705)        | Cell Signaling | 9145        | Rabbit | Polyclonal | 79, 86kDa  | 1:2000        |                                 |
+| Anti-pSTAT1(Tyr701)        | Cell Signaling | 9167        | Rabbit | Polyclonal | 84, 91kDa  | 1:1000        |                                 |
+| Anti-STAT3                 | Cell Signaling | 4904        | Rabbit | 79D7       | 79, 86kDa  | 1:2000        |                                 |
+| Anti-STAT1                 | Cell Signaling | 9172        | Rabbit | Polyclonal | 84, 91kDa  | 1:1000        |                                 |
+
+- Dilute antibody in [[Antibody buffer]]
+
+
+/Part of the protocol was adapted from a protocol written by Dr. Duygu Dee Harrison-Findik in 2009/
