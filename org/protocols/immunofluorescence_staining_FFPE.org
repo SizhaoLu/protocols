@@ -16,7 +16,7 @@
   - Ethanol (100%, 90%, 80%, 70%, 50%)
   - DI H2O
   - PBS (Phosphate-Buffered Saline)
-  - PBS-T (PBS + 0.5% Tween-20)
+  - PBS-T (PBS + 0.1% Tween-20; 2mL in 2L)
   - Antigen unmasking solution (vector #H-3300)
   - 0.1M Glycine in PBS-T (0.751 g glycine per 100 mL PBS-T)
   - Sudan Black B (Sigma 199664-25G)
@@ -26,15 +26,9 @@
     2) 8mL Superblock (40%)
     3) 2mL goat serum (10%)
     4) 2ml horse serum (10%)
-  - Citrate antigen retrieval solution (or Tris-based alternative; e.g.,
-    Vector Antigen Unmasking Solution, #H-3300)
-  - Glycine (Sigma G-8898)
   - Sodium borohydride (NaBH4) tablets
   - Clear Hank's Buffer
-  - Bovine serum albumin (BSA)
-  - Superblock
-  - Goat/Horse serum
-  - DAPI-containing antifade mountant (e.g., ProLong Gold Antifade with DAPI)
+  - DAPI-containing antifade mountant
 
 * Procedures
 1. Deparaffinization
@@ -59,7 +53,8 @@
 
 4. Antigen Retrieval
    - Prepare Citrate (or Tris) antigen unmasking working solution,
-     1:100 in DI H2O, in clear/glass containers
+     1:100 in DI H2O, in clear/glass containers. Need 70 mL in small
+     glass tank, 140 mL in plastic tank.
    - Pressure cooker setup (BioSB)
      1) Fill base of pressure cooker with DI H2O to just cover the bottom of slide containers
      2) Close lid, pressure valve *closed*
@@ -88,7 +83,7 @@
    - Incubate overnight at 4°C in a humidified chamber
 
 9. Wash
-   - PBS-T, 3–4× 3–5 min
+   - PBS-T, 3 × 3 min
 
 10. Secondary Antibody
     - Dilute secondary antibodies in blocking buffer
@@ -96,7 +91,6 @@
 
 11. Wash
     - PBS-T, 3× 3 min
-    - Dry slides carefully (KimWipe around, not on, tissue)
 
 12. Mounting
     - Apply DAPI-containing antifade mountant and coverslip
