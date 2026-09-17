@@ -96,6 +96,7 @@ mouse kidney).
    | Anti-Aquaporin 2           | Santa Cruz      | sc-9882    | Mouse  | C-17       | HMR            | None        |                  |                 | 1:50-500 | Not tested                                             |
    | Anti-C3b                   | MP Biomedicals  | 55500      | Goat   | Polyclonal | Mouse          | FITC        |                  |                 |    1:650 |                                                        |
    | Anti-C3d                   | ThurmanLab prod | N/A        | Mouse  | 3d29       | Mouse          | AF647       | 1.42             | 3               |    1:473 | From Thurman group                                     |
+   | Anti-C3d                   | ThurmanLab prod | N/A        | Mouse  | 5b3        | Mouse          | AF647       | 1.82             | 5               |    1:364 | From Thurman group                                     |
 
 2. Always include a negative control when possible.
    - Pick the sample expected to have positive signal (i.e., an
