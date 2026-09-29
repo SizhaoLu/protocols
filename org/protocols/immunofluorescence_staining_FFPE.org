@@ -17,6 +17,7 @@
   - DI H2O
   - PBS (Phosphate-Buffered Saline)
   - PBS-T (PBS + 0.1% Tween-20; 2mL in 2L)
+  - PBS-Triton X-100 (PBS + 0.1% Triton X-100; 2mL in 2L)
   - Antigen unmasking solution (vector #H-3300)
   - 0.1M Glycine in PBS-T (0.751 g glycine per 100 mL PBS-T)
   - Sudan Black B (Sigma 199664-25G)
@@ -45,7 +46,6 @@
    | 70% EtOH  | 3 min    |
    | 50% EtOH  | 3 min    |
    | DI H2O    | 3 min    |
-   | PBS-T     | 3 min x3 |
 
 3. Sudan Black (autofluorescence reduction)
    - 0.1% Sudan Black B in 70% EtOH (0.2 g in 200 mL 70% EtOH) — 20 min, RT
@@ -53,8 +53,8 @@
 
 4. Antigen Retrieval
    - Prepare Citrate (or Tris) antigen unmasking working solution,
-     1:100 in DI H2O, in clear/glass containers. Need 70 mL in small
-     glass tank, 140 mL in plastic tank.
+     1:100 in DI H2O, in clear plastic container (do not use glass
+     container). Need 200 mL in plastic tank.
    - Pressure cooker setup (BioSB)
      1) Fill base of pressure cooker with DI H2O to just cover the bottom of slide containers
      2) Close lid, pressure valve *closed*
@@ -81,6 +81,7 @@
 8. Primary Antibody
    - Dilute primary antibodies in blocking buffer at optimized concentrations for your targets
    - Incubate overnight at 4°C in a humidified chamber
+   - [[file:antibody_info.org::#FFPE-tissue][Antibody dilution information]]
 
 9. Wash
    - PBS-T, 3 × 3 min
@@ -97,3 +98,9 @@
     - Seal edges with nail polish
     - Allow to dry in the dark
     - Store/image protected from light
+* Tips and troubleshooting
+1. Always include a negative control when possible.
+   - Pick the sample expected to have positive signal (i.e., an
+     isotype or secondary-only control run alongside a known-positive
+     tissue).
+3. Use Triton X-100 containing buffers for nuclear staining

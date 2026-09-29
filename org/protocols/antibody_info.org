@@ -1,0 +1,48 @@
+#+OPTIONS: toc:nil
+#+TITLE:Antibody information
+* For frozen tissue
+:PROPERTIES:
+:CUSTOM_ID: frozen-tissue
+:END:
+
+| Antibody                   | Company        | Cat#       | Host   | Clone      | Reactivity | Conjugation | Dilution | Note                                                   |
+|----------------------------+----------------+------------+--------+------------+------------+-------------+----------+--------------------------------------------------------|
+| Anti-Actin, α-SmoothMuscle | Sigma          | C6198      | Mouse  | 1A4        | HMR        | Cy3         |   1:2000 | 1 hour RT incubation                                   |
+| Anti-GFP                   | Abcam          | ab290      | Rabbit | Polyclonal | N/A        | None        |    1:200 |                                                        |
+| Anti-GFP                   | Abcam          | ab6673     | Goat   | Polyclonal | N/A        | None        |    1:500 |                                                        |
+| Anti-GFP                   | Abcam          | ab6662     | Goat   | Polyclonal | N/A        | FITC        |    1:200 |                                                        |
+| Anti-tdTomato              | Kerafast       | EST203     | Rat    | EST203     | N/A        | None        |    1:200 |                                                        |
+| Anti-mCherry               | Invitrogen     | MA5-14524  | Rat    | 16D7       | N/A        | None        |    1:100 | Cross-reacts with tdTomato                             |
+| Anti-CD3                   | ProteinTech    | 17617-1-AP | Rabbit | Polyclonal | HMR        | None        |    1:100 | Works well; requires antigen retrieval                 |
+| Anti-CD4                   | Invitrogen     | 14-9766-82 | Rat    | 4SM95      | HM         | None        |    1:100 |                                                        |
+| Anti-CD4                   | Biolegend      | 100401     | Rat    | GK1.5      | M          | None        |     1:25 | Ref: PMID 36092510                                     |
+| Anti-GLUT1                 | Abcam          | ab115730   | Rabbit | EPR3915    | HMR        | None        |    1:160 |                                                        |
+| Anti-CD68                  | BioRad         | MCA1957    | Rat    | FA-11      | M          | None        |     1:50 |                                                        |
+| Anti-F4/80                 | BioRad         | MCA497     | Rat    | Cl:A3-1    | M          | None        |     1:50 |                                                        |
+| Anti-C5b-9                 | Santa Cruz     | sc-58935   | Mouse  | aE11       | H          | None        |     1:75 |                                                        |
+| Anti-HIF1a                 | Abcam          | ab179483   | Rabbit | EPR16897   | HMR        | None        |    1:500 |                                                        |
+| Anti-PKM2                  | CST            | #4053      | Rabbit | N/A        | HMR        | None        |    1:100 |                                                        |
+| Anti-Cxcr7                 | Abcam          | ab72100    | Rabbit | N/A        | HM         | None        |    1:100 |                                                        |
+| Anti-Dnmt1                 | Abcam          | ab188453   | Rabbit | EPR18453   | HMR        | None        |    1:200 | Works well for cells; does not seem to work for tissue |
+| Anti-Aquaporin 2           | Santa Cruz     | sc-515770  | Mouse  | E-2        | HMR        | None        |    1:100 | IgG1κ Works well for OCT                               |
+| Anti-Aquaporin 2           | Santa Cruz     | sc-9882    | Mouse  | C-17       | HMR        | None        | 1:50-500 | Not tested                                             |
+| Anti-C3b                   | MP Biomedicals | 55500      | Goat   | Polyclonal | M          | FITC        |    1:650 |                                                        |
+| Anti-C3d                   | ThurmanLab     | N/A        | Mouse  | 3d29       | M          | AF647       |    1:473 | From Thurman group, stock at 1.42 mg/mL                |
+| Anti-C3d                   | ThurmanLab     | N/A        | Mouse  | 5b3        | M          | AF647       |    1:364 | From Thurman group, stock at 1.82 mg/mL                |
+* For FFPE tissue
+:PROPERTIES:
+:CUSTOM_ID: FFPE-tissue
+:END:
+| Antibody   | Company        | Cat#       | Host               | Clone      | Reactivity   | Conjugation  | Dilution | Location   | Note                                              |
+|------------+----------------+------------+--------------------+------------+--------------+--------------+----------+------------+---------------------------------------------------|
+| Anti-F4/80 | Cell Signaling | 30325      | Rabbit             | D4C8V      | M            | None         |    1:100 | -20 BoxII  | The Cl:A3-1 clone does not work for FFPE          |
+| Arg1       | Abcam          | ab60176    | Goat               | Polyclonal | MR           | None         |     1:25 | -20 BoxII  | Tested at 1:25, did not work                      |
+| Arg2       | Abcam          | ab228700   | Rabbit             | Polyclonal | Human, Mouse | None         |     1:50 | -20 BoxII  |                                                   |
+| C-MYC      | Proteintech    | 67447-1-Ig | Mouse IgG1         | 3D9C12     | HMR          | None         |     1:50 | -20 BoxII  | Does not work for FFPE with IF; IHC works at 1:50 |
+| αSMA       | Invitrogen     | 14-9760-82 | Mouse IgG2a, kappa | 1A4        | HMR          | None         |    1:500 | Fridge     |                                                   |
+| Sox9       | Millipore      | AB5535     | Rabbit             | Polyclonal | HMR          | None         |    1:250 | Fridge     | In test                                           |
+| PCNA       | Cell Signaling | 2586       | Mouse IgG2a        | PC10       | HMR          | None         |    1:800 | -20        |                                                   |
+| Kim1       | Invitrogen     | MA5-28211  | Rat IgG2a          | RMT1-10    | HM           | None         |          | not found  | In test. 1:50 and 1:200                           |
+| DBA        | Vector Lab     | B-1035     | Lectin (GalNAc)    | N/A        | N/A          | Biotinylated |    1:200 | -20 lectin |                                                   |
+
+Specificity abbreviations: H = human, M = mouse, R = rat.
