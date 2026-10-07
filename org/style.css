@@ -43,35 +43,22 @@ body {
   padding: 2.8rem 0 4rem;
 }
 
-/* Pages with tables receive more room automatically. */
-body.has-table #content {
-  width: min(var(--table-width), calc(100% - 3rem));
-}
-
 /* Explicit opt-in for especially wide pages:
    #+PAGE_LAYOUT: wide */
 body.layout-wide #content {
   width: min(var(--wide-width), calc(100% - 2rem));
 }
 
-/* Keep normal prose comfortable even on table-heavy / wide pages.
+/* On explicit wide pages (#+PAGE_LAYOUT: wide) #content is wide, so keep
+   prose at a readable measure, left-aligned with the tables.
    Org nests content like:
      #content > .outline-2 > (h2, .outline-text-2 > (p, table, ...))
    so the wrapper divs must stay full width (otherwise they squeeze the
    tables), and the constraint is applied to the prose elements inside. */
-:is(body.has-table, body.layout-wide) #content > :not(.table-scroll):not(#table-of-contents):not([class^="outline-"]),
-:is(body.has-table, body.layout-wide) [id^="outline-container-"] > :not(.table-scroll):not([class^="outline-"]),
-:is(body.has-table, body.layout-wide) [class^="outline-text-"] > :not(.table-scroll):not([class^="outline-"]) {
-  max-width: var(--reading-width);
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* On explicit wide pages, left-align prose with the left edge of the
-   tables instead of centering it. (Must stay after the rule above.) */
 body.layout-wide #content > :not(.table-scroll):not(#table-of-contents):not([class^="outline-"]),
 body.layout-wide [id^="outline-container-"] > :not(.table-scroll):not([class^="outline-"]),
 body.layout-wide [class^="outline-text-"] > :not(.table-scroll):not([class^="outline-"]) {
+  max-width: var(--reading-width);
   margin-left: 0;
   margin-right: auto;
 }
