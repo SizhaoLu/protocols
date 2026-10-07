@@ -46,10 +46,12 @@
    | 70% EtOH  | 3 min    |
    | 50% EtOH  | 3 min    |
    | DI H2O    | 3 min    |
+   | PBS-T     | 3 min    |
 
 3. Sudan Black (autofluorescence reduction)
    - 0.1% Sudan Black B in 70% EtOH (0.2 g in 200 mL 70% EtOH) — 20 min, RT
-   - Rinse: PBS-T, 3× 3 min
+   - Quick rinse in DI H2O
+   - Wash with PBS-T, 3× 3 min
 
 4. Antigen Retrieval
    - Prepare Citrate (or Tris) antigen unmasking working solution,
@@ -70,7 +72,7 @@
    - 1 tablet NaBH4 dissolved in exactly 100 mL cold, clear Hank's Buffer
    - *Use a glass container, in a fume hood, on ice*
    - Incubate 40 min
-   - wash with PBS-T, 3× 3 min
+   - Wash with PBS-T, 3× 3 min
 
 7. Blocking
    - Circle tissue with hydrophobic barrier pen; dry slide carefully
@@ -103,4 +105,4 @@
    - Pick the sample expected to have positive signal (i.e., an
      isotype or secondary-only control run alongside a known-positive
      tissue).
-3. Use Triton X-100 containing buffers for nuclear staining
+2. Use Triton X-100 containing buffers for nuclear staining

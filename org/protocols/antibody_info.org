@@ -44,5 +44,7 @@
 | PCNA       | Cell Signaling | 2586       | Mouse IgG2a        | PC10       | HMR          | None         |    1:800 | -20        |                                                   |
 | Kim1       | Invitrogen     | MA5-28211  | Rat IgG2a          | RMT1-10    | HM           | None         |          | not found  | In test. 1:50 and 1:200                           |
 | DBA        | Vector Lab     | B-1035     | Lectin (GalNAc)    | N/A        | N/A          | Biotinylated |    1:200 | -20 lectin |                                                   |
+| LTA        | Vector Lab     | B-1325     | Lectin             | N/A        | N/A          | Biotinylated |    1:100 | -20 lectin | in test                                           |
+| PNA        | Vector Lab     | B-1075     | Lectin             | N/A        | N/A          | Biotinylated |    1:200 | -20 lectin | in test                                           |
 
 Specificity abbreviations: H = human, M = mouse, R = rat.
