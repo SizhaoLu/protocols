@@ -15,6 +15,9 @@
   "Shared <head> additions for all exported pages."
   (concat
    "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n"
+   ;; Apply a saved theme before the page paints to avoid a flash of the
+   ;; wrong theme. If no preference is saved, CSS follows the OS setting.
+   "<script>(function(){try{var t=localStorage.getItem('protocols-theme');if(t==='light'||t==='dark'){document.documentElement.dataset.theme=t;}}catch(e){}})();</script>\n"
    "<link rel=\"stylesheet\" href=\"" site-root "/style.css\" type=\"text/css\" />"))
 
 (defun site-html-preamble (_info)
@@ -24,17 +27,48 @@
     "<header class=\"site-header\">"
     "<div class=\"site-header-inner\">"
     "<a class=\"site-title\" href=\"%s/\">Protocols</a>"
+    "<div class=\"site-actions\">"
     "<nav class=\"site-nav\" aria-label=\"Primary\">"
     "<a href=\"%s/protocols/\">Protocols</a>"
     "<a href=\"%s/snippets/\">Snippets</a>"
     "</nav>"
+    "<button class=\"theme-toggle\" type=\"button\" aria-label=\"Toggle light and dark theme\" title=\"Toggle light and dark theme\">"
+    "<span class=\"theme-toggle-icon\" aria-hidden=\"true\">◐</span>"
+    "<span class=\"theme-toggle-label\">Theme</span>"
+    "</button>"
     "</div>"
-    "</header>")
+    "</div>"
+    "</header>"
+    "<script>"
+    "(function(){"
+    "var b=document.querySelector('.theme-toggle');if(!b)return;"
+    "function effective(){var t=document.documentElement.dataset.theme;if(t)return t;return window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}"
+    "function sync(){var t=effective();b.setAttribute('aria-pressed',t==='dark'?'true':'false');b.querySelector('.theme-toggle-label').textContent=t==='dark'?'Light':'Dark';}"
+    "b.addEventListener('click',function(){var next=effective()==='dark'?'light':'dark';document.documentElement.dataset.theme=next;try{localStorage.setItem('protocols-theme',next);}catch(e){}sync();});"
+    "var mq=window.matchMedia('(prefers-color-scheme: dark)');if(mq.addEventListener){mq.addEventListener('change',function(){if(!document.documentElement.dataset.theme)sync();});}"
+    "sync();"
+    "})();"
+    "</script>")
    site-root site-root site-root))
 
 (defun site-html-postamble (_info)
-  "Shared footer."
-  "<footer class=\"site-footer\"><p>Last built: %T</p></footer>")
+  "Shared footer with an explicit build timestamp."
+  (format
+   "<footer class=\"site-footer\"><p>Last built: %s</p></footer>"
+   (format-time-string "%Y-%m-%d %H:%M %Z")))
+
+
+(defun site-page-layout-from-source (info)
+  "Return PAGE_LAYOUT from the current Org source file, if present."
+  (let ((input-file (plist-get info :input-file)))
+    (when (and input-file (file-readable-p input-file))
+      (with-temp-buffer
+        (insert-file-contents input-file)
+        (goto-char (point-min))
+        (let ((case-fold-search t))
+          (when (re-search-forward
+                 "^[ \t]*#\\+PAGE_LAYOUT:[ \t]*\\([^\n\r]+\\)" nil t)
+            (string-trim (match-string 1))))))))
 
 (defun site-html-filter-final-output (output backend info)
   "Apply site-specific HTML enhancements to OUTPUT.
@@ -44,7 +78,10 @@ contain a table get a wider content class automatically. PAGE_LAYOUT=wide
 adds an explicit extra-wide layout class."
   (if (not (org-export-derived-backend-p backend 'html))
       output
-    (let* ((layout (downcase (or (plist-get info :page-layout) "default")))
+    (let* ((layout (downcase
+                    (or (site-page-layout-from-source info)
+                        (plist-get info :page-layout)
+                        "default")))
            (has-table (string-match-p "<table\\b" output))
            (body-classes
             (string-join

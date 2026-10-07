@@ -100,6 +100,38 @@ body.layout-wide #content > :not(.table-scroll):not(#table-of-contents) {
   border-bottom: none;
 }
 
+.site-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  appearance: none;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  background: var(--paper-raised);
+  color: var(--ink);
+  padding: 0.35rem 0.65rem;
+  font-family: "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.82rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.theme-toggle:hover,
+.theme-toggle:focus-visible {
+  border-color: var(--accent);
+}
+
+.theme-toggle-icon {
+  font-size: 1rem;
+  line-height: 1;
+}
+
 /* ---- Headings ---- */
 h1, h2, h3, h4 {
   font-family: "Avenir Next", "Helvetica Neue", Arial, sans-serif;
@@ -342,9 +374,33 @@ ul.org-ul li a {
   display: none;
 }
 
-/* ---- Dark mode ---- */
+/* ---- Theme handling ----
+   With no data-theme attribute, follow the operating-system preference.
+   The toggle sets data-theme to light or dark and remembers the choice. */
+:root[data-theme="dark"] {
+  --ink: #e7e4dc;
+  --muted: #aaa69b;
+  --paper: #1d1e1b;
+  --paper-raised: #242520;
+  --rule: #3b3d36;
+  --accent: #9aad87;
+  --accent-dark: #b4c6a2;
+  --code-bg: #292b26;
+}
+
+:root[data-theme="light"] {
+  --ink: #2b2b28;
+  --muted: #6b6760;
+  --paper: #fbfaf7;
+  --paper-raised: #ffffff;
+  --rule: #dedad0;
+  --accent: #6b7f5b;
+  --accent-dark: #4f5f44;
+  --code-bg: #f1efe8;
+}
+
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme]) {
     --ink: #e7e4dc;
     --muted: #aaa69b;
     --paper: #1d1e1b;
@@ -374,9 +430,21 @@ ul.org-ul li a {
     gap: 0.75rem;
   }
 
+  .site-actions {
+    gap: 0.6rem;
+  }
+
   .site-nav {
     gap: 0.7rem;
     font-size: 0.82rem;
+  }
+
+  .theme-toggle {
+    padding: 0.35rem 0.5rem;
+  }
+
+  .theme-toggle-label {
+    display: none;
   }
 
   h1 {
