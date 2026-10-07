@@ -1,5 +1,6 @@
 #+OPTIONS: toc:nil
 #+TITLE:Antibody information
+#+PAGE_LAYOUT: wide
 * For frozen tissue
 :PROPERTIES:
 :CUSTOM_ID: frozen-tissue
