@@ -66,7 +66,7 @@
 
 - Following transfer, wash the membrane in 1x [[10x TBS]] for 5 to 10 minutes with gentle agitation at room temperature twice.
 - Place membrane carefully in [[Blocking buffer]]. Gently agitate the solution and incubate for 1 hour at RT.
-- Incubate with primary antibody (see [[Antibodies dilution reference]]) overnight at 4 °C.
+- Incubate with primary antibody (see [[file:antibody_info.org::#western-blot][Antibody dilution information]]) overnight at 4 °C.
 - 6 mL of diluted antibody is needed if plastic pouch is used.
 
 - Next morning, wash the membrane four times with TBST for 5 min
@@ -162,49 +162,6 @@ PH should be around 7.6 (no need to adjust pH). Add Tween-20 to 0.2% in 1x TBS f
 ** Antibody buffer
 
 Dilute blocking buffer 1:10 in TBST
-
-* Antibodies dilution reference
-
-| Antibody                  | Company        | Cat#        | Host   | Clone      | MW         | Dilution      | notes                          |
-|----------------------------+----------------+-------------+--------+------------+------------+---------------+---------------------------------|
-| Anti-β-Actin               | Sigma          | A5441       | Mouse  | AC-15      | 42 kDa     | 1:60000       |                                 |
-| Anti-GAPDH                 | millipore      | MAB374      | Mouse  | 6C5        | 38 kDa     | 1:4000        |                                 |
-| Phospho-Smad2/3            | Cell Signaling | #8828       | Rabbit | D27F4      | 52, 60 kDa | 1:1000        |                                 |
-| Phospho-Erk1/2             | Cell Signaling | #4377       | Rabbit | 197G2      | 42, 44 kDa | 1:1000        |                                 |
-| Anti-Smad7                 | Santa Cruz     | sc-365846   | Mouse  | B-8        | 46 kDa     | 1:600         |                                 |
-| Anti-KLF4                  | R&D Systems    | AF3158      | Goat   |            | 55 kda     | 1:2000        | Some strong nonspecific bands   |
-| Anti-Klf4                  | Santa Cruz     | sc-393462 x | Mouse  | B-8        | 55 kda     | 1:6000        | Some strong nonspecific bands   |
-| Anti-Klf4                  | Santa Cruz     | sc-166238 x | Mouse  | F-8        | 55 kda     | 1:6000        |                                 |
-| Anti-Klf4                  | Invitrogen     | PA5-27440   | Rabbit | Polyclonal | 55 kda     | 1:1000        | no diff between KO WT           |
-| Anti-Klf4                  | Cell Signaling | #4038       | Rabbit | Polyclonal | 65 kda     | 1:1000        |                                 |
-| Anti-aSMA                  | Abcam          | ab5694      | Rabbit |            | 42 kDa     | 1:60000       |                                 |
-| Anti-HDAC1                 | Cell Signaling | #34589      | Rabbit | D5C6U      | 62 kDa     | 1:1000        |                                 |
-| Anti-PKM2                  | Cell Signaling | #4053       | Rabbit | D78A4      | 60 kDa     | 1:1000        |                                 |
-| Anti-HIF1a                 | Abcam          | ab179483    | Rabbit | EPR16897   | 110 kDa    | 1:1000        |                                 |
-| Anti-PTEN                  | Cell Signaling | #9559       | Rabbit | 138G6      | 54 kDa     | 1:1000        |                                 |
-| Anti-Ezh2                  | Cell Signaling | 5246S       | Rabbit | D2C9       | 98         | 1:1000        |                                 |
-| Anti-Cxcr7                 | Abcam          | ab117836    | Rabbit |            | 41 kDa     | 1:1000        | Not working for WB?             |
-| Anti-SMMHC                 | Abcam          | ab125884    | Rabbit |            | 227 kDa    | 1:1000        |                                 |
-| Anti-Calponin 1/2/3        | Santa Cruz     | sc-28545    | Rabbit |            | 33-36 kDa  | 1:1000        |                                 |
-| Anti-Klf4                  | Cell Signaling | #4038S      | Rabbit |            | 65 kDa     | 1:1000        |                                 |
-| Anti-CXCR-7                | Abcam          | ab72100     | Rabbit |            | 42 kDa     | 1:200         | 4 - 6 µg/ml                     |
-| Anti-Phospho-Akt (Ser473)  | Cell Signaling | #4058       | Rabbit |            | 60 kDa     | 1:1000        |                                 |
-| Anti-Fibronectin           | Abcam          | ab2413      | Rabbit |            |            | 1:1000        |                                 |
-| Anti-PTEN                  | Cell Signaling | 14642S      | Mouse  | D3Q6G      | 54 kDa     | 1:1000        |                                 |
-| Anti-Phosphoserine         | Invitrogen     | MA1-91608   | Mouse  | 3C171      | NA         | 1:500         |                                 |
-| Anti-Dnmt1                 | Abcam          | ab188453    | Rabbit | EPR18453   | 183 kDa    | 1:1000        |                                 |
-| Anti-AKT                   | Cell Signaling | 9272        | Rabbit |            | 60 kDa     | 1:1000        |                                 |
-| Anti-Dnmt1                 | Cell Signaling | 5032S       | Rabbit | D63A6      | 200 kDa    | 1:1000        |                                 |
-| Anti-Tet2                  | Abcam          | ab124297    | Rabbit |            | 223 kDa    | 1:250         |                                 |
-| Anti-DNMT1                 | Invitrogen     | MA5-16169   | Mouse  | 60B1220.1  | 200 kDa    | 1:2000        | worked                          |
-| Anti-FN1                   | Abcam          | Ab2413      | Rabbit | Polyclonal | 272 kDa    | Try 1:50      | Concentration varies by lot, current lot is 24.22ug/mL |
-| Anti-FAP                   | Abcam          | Ab28244     | Rabbit | Polyclonal | 87.7 kDa   | 1:1000-1:5000 |                                 |
-| Anti-pSTAT3(Tyr705)        | Cell Signaling | 9145        | Rabbit | Polyclonal | 79, 86kDa  | 1:2000        |                                 |
-| Anti-pSTAT1(Tyr701)        | Cell Signaling | 9167        | Rabbit | Polyclonal | 84, 91kDa  | 1:1000        |                                 |
-| Anti-STAT3                 | Cell Signaling | 4904        | Rabbit | 79D7       | 79, 86kDa  | 1:2000        |                                 |
-| Anti-STAT1                 | Cell Signaling | 9172        | Rabbit | Polyclonal | 84, 91kDa  | 1:1000        |                                 |
-
-- Dilute antibody in [[Antibody buffer]]
 
 
 /Part of the protocol was adapted from a protocol written by Dr. Duygu Dee Harrison-Findik in 2009/
