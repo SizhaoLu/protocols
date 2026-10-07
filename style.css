@@ -1,12 +1,21 @@
+/* ============================================================
+   Experimental Protocols — Org HTML theme
+   ============================================================ */
+
 /* ---- Base ---- */
 :root {
   --ink: #2b2b28;
+  --muted: #6b6760;
   --paper: #fbfaf7;
+  --paper-raised: #ffffff;
   --rule: #dedad0;
-  --accent: #6b7f5b;   /* muted sage — nods to lab/biology without being cute */
+  --accent: #6b7f5b;
   --accent-dark: #4f5f44;
   --code-bg: #f1efe8;
-  --max-width: 760px;
+  --reading-width: 760px;
+  --table-width: 1120px;
+  --wide-width: 1440px;
+  --header-height: 58px;
 }
 
 * {
@@ -15,17 +24,80 @@
 
 html {
   -webkit-text-size-adjust: 100%;
+  scroll-padding-top: calc(var(--header-height) + 1.5rem);
 }
 
 body {
+  margin: 0;
   background: var(--paper);
   color: var(--ink);
   font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
   font-size: 18px;
   line-height: 1.65;
-  max-width: var(--max-width);
+}
+
+/* Org's document content stays at a readable measure. */
+#content {
+  width: min(var(--reading-width), calc(100% - 3rem));
   margin: 0 auto;
-  padding: 2.5rem 1.5rem 4rem;
+  padding: 2.8rem 0 4rem;
+}
+
+/* Pages with tables receive more room automatically. */
+body.has-table #content {
+  width: min(var(--table-width), calc(100% - 3rem));
+}
+
+/* Explicit opt-in for especially wide pages:
+   #+PAGE_LAYOUT: wide */
+body.layout-wide #content {
+  width: min(var(--wide-width), calc(100% - 2rem));
+}
+
+/* Keep normal prose comfortable even on table-heavy pages. */
+body.has-table #content > :not(.table-scroll):not(#table-of-contents),
+body.layout-wide #content > :not(.table-scroll):not(#table-of-contents) {
+  max-width: var(--reading-width);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ---- Site header ---- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: color-mix(in srgb, var(--paper) 94%, transparent);
+  border-bottom: 1px solid var(--rule);
+  backdrop-filter: blur(10px);
+}
+
+.site-header-inner {
+  min-height: var(--header-height);
+  width: min(var(--table-width), calc(100% - 3rem));
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.site-title {
+  font-family: "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 700;
+  color: var(--ink);
+  border-bottom: none;
+}
+
+.site-nav {
+  display: flex;
+  gap: 1rem;
+  font-family: "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.9rem;
+}
+
+.site-nav a {
+  border-bottom: none;
 }
 
 /* ---- Headings ---- */
@@ -41,7 +113,7 @@ h1 {
   font-weight: 700;
   border-bottom: 2px solid var(--accent);
   padding-bottom: 0.4rem;
-  margin-bottom: 1.5rem;
+  margin: 0 0 1.5rem;
 }
 
 h2 {
@@ -59,12 +131,8 @@ h3 {
 
 h4 {
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 500;
   margin-top: 1.5rem;
-}
-
-#postamble h2 {
-  display: none; /* org sometimes wraps postamble title; hide if present */
 }
 
 /* ---- Links ---- */
@@ -74,7 +142,8 @@ a {
   border-bottom: 1px solid var(--rule);
 }
 
-a:hover {
+a:hover,
+a:focus-visible {
   border-bottom-color: var(--accent-dark);
 }
 
@@ -114,28 +183,68 @@ pre code {
 }
 
 /* ---- Tables ---- */
+.table-scroll {
+  width: 100%;
+  overflow-x: auto;
+  margin: 1.5rem auto 2rem;
+  padding-bottom: 0.35rem;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* On normal pages a table can break out of the prose column while staying centered. */
+body:not(.has-table) .table-scroll {
+  width: min(var(--table-width), calc(100vw - 3rem));
+  max-width: none;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
 table {
   border-collapse: collapse;
-  width: 100%;
-  margin: 1.2rem 0;
+  width: max-content;
+  min-width: 100%;
+  margin: 0 auto;
   font-size: 0.95em;
+  background: var(--paper-raised);
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
 }
 
 th, td {
   border-bottom: 1px solid var(--rule);
-  padding: 0.5rem 0.8rem;
+  padding: 0.55rem 0.8rem;
   text-align: left;
+  vertical-align: top;
 }
 
 th {
+  position: sticky;
+  top: var(--header-height);
+  z-index: 2;
+  background: var(--code-bg);
   font-family: "Avenir Next", "Helvetica Neue", Arial, sans-serif;
   font-weight: 600;
   color: var(--accent-dark);
+  white-space: nowrap;
+}
+
+tbody tr:nth-child(even) {
+  background: color-mix(in srgb, var(--code-bg) 42%, transparent);
+}
+
+.table-scroll::-webkit-scrollbar {
+  height: 10px;
+}
+
+.table-scroll::-webkit-scrollbar-thumb {
+  background: var(--rule);
+  border-radius: 999px;
 }
 
 /* ---- Images ---- */
 img {
   max-width: 100%;
+  height: auto;
   border-radius: 4px;
   margin: 1rem 0;
 }
@@ -145,9 +254,10 @@ img {
   margin: 1.5rem 0;
 }
 
-.figure p {
+.figure p,
+.figure-number {
   font-size: 0.85em;
-  color: #6b6760;
+  color: var(--muted);
   font-style: italic;
 }
 
@@ -171,17 +281,35 @@ img {
   margin: 0;
 }
 
-/* ---- Postamble / footer ---- */
-#postamble {
-  margin-top: 3rem;
-  padding-top: 1rem;
-  border-top: 1px solid var(--rule);
-  font-size: 0.8em;
-  color: #8a8678;
-  font-family: "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+/* ---- Org special blocks ----
+   Usage:
+   #+begin_note
+   ...
+   #+end_note
+
+   #+begin_warning
+   ...
+   #+end_warning
+*/
+.note,
+.warning,
+.tip {
+  margin: 1.5rem 0;
+  padding: 0.9rem 1rem;
+  border-left: 4px solid var(--accent);
+  background: var(--code-bg);
+  border-radius: 0 6px 6px 0;
 }
 
-/* ---- Sitemap pages (auto-generated index lists) ---- */
+.warning {
+  border-left-color: #9a6545;
+}
+
+.tip {
+  border-left-color: #637b55;
+}
+
+/* ---- Sitemap pages ---- */
 ul.org-ul {
   list-style: none;
   padding-left: 0;
@@ -198,13 +326,64 @@ ul.org-ul li a {
   border-bottom: none;
 }
 
+/* ---- Footer ---- */
+.site-footer,
+#postamble {
+  width: min(var(--reading-width), calc(100% - 3rem));
+  margin: 0 auto 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--rule);
+  font-size: 0.8em;
+  color: #8a8678;
+  font-family: "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+}
+
+#postamble h2 {
+  display: none;
+}
+
+/* ---- Dark mode ---- */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #e7e4dc;
+    --muted: #aaa69b;
+    --paper: #1d1e1b;
+    --paper-raised: #242520;
+    --rule: #3b3d36;
+    --accent: #9aad87;
+    --accent-dark: #b4c6a2;
+    --code-bg: #292b26;
+  }
+}
+
 /* ---- Mobile ---- */
 @media (max-width: 600px) {
   body {
     font-size: 16.5px;
-    padding: 1.5rem 1rem 3rem;
   }
+
+  #content,
+  body.has-table #content,
+  body.layout-wide #content {
+    width: calc(100% - 2rem);
+    padding-top: 1.7rem;
+  }
+
+  .site-header-inner {
+    width: calc(100% - 2rem);
+    gap: 0.75rem;
+  }
+
+  .site-nav {
+    gap: 0.7rem;
+    font-size: 0.82rem;
+  }
+
   h1 {
     font-size: 1.6rem;
+  }
+
+  th, td {
+    padding: 0.5rem 0.65rem;
   }
 }
