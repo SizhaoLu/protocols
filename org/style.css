@@ -54,9 +54,14 @@ body.layout-wide #content {
   width: min(var(--wide-width), calc(100% - 2rem));
 }
 
-/* Keep normal prose comfortable even on table-heavy pages. */
-body.has-table #content > :not(.table-scroll):not(#table-of-contents),
-body.layout-wide #content > :not(.table-scroll):not(#table-of-contents) {
+/* Keep normal prose comfortable even on table-heavy / wide pages.
+   Org nests content like:
+     #content > .outline-2 > (h2, .outline-text-2 > (p, table, ...))
+   so the wrapper divs must stay full width (otherwise they squeeze the
+   tables), and the constraint is applied to the prose elements inside. */
+:is(body.has-table, body.layout-wide) #content > :not(.table-scroll):not(#table-of-contents):not([class^="outline-"]),
+:is(body.has-table, body.layout-wide) [id^="outline-container-"] > :not(.table-scroll):not([class^="outline-"]),
+:is(body.has-table, body.layout-wide) [class^="outline-text-"] > :not(.table-scroll):not([class^="outline-"]) {
   max-width: var(--reading-width);
   margin-left: auto;
   margin-right: auto;
@@ -223,14 +228,6 @@ pre code {
   -webkit-overflow-scrolling: touch;
 }
 
-/* On normal pages a table can break out of the prose column while staying centered. */
-body:not(.has-table) .table-scroll {
-  width: min(var(--table-width), calc(100vw - 3rem));
-  max-width: none;
-  margin-left: 50%;
-  transform: translateX(-50%);
-}
-
 table {
   border-collapse: collapse;
   width: max-content;
@@ -250,9 +247,6 @@ th, td {
 }
 
 th {
-  position: sticky;
-  top: var(--header-height);
-  z-index: 2;
   background: var(--code-bg);
   font-family: "Avenir Next", "Helvetica Neue", Arial, sans-serif;
   font-weight: 600;

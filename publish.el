@@ -90,19 +90,22 @@ adds an explicit extra-wide layout class."
                          (when has-table "has-table")
                          (when (string= layout "wide") "layout-wide")))
              " ")))
-      ;; Add page classes to <body>.
+      ;; Add page classes to <body> (tolerates existing attributes).
       (setq output
             (replace-regexp-in-string
-             "<body>"
-             (format "<body class=\"%s\">" body-classes)
-             output t t))
+             "<body\\([^>]*\\)>"
+             (format "<body class=\"%s\"\\1>" body-classes)
+             output t nil))
 
       ;; Wrap each exported table so very wide tables scroll independently.
+      ;; Open/close tags are wrapped separately: a single non-greedy regexp
+      ;; over the whole table can overflow Emacs' regexp stack on big pages.
       (setq output
             (replace-regexp-in-string
-             "\\(<table\\b\\(?:.\\|\n\\)*?</table>\\)"
-             "<div class=\"table-scroll\">\\1</div>"
-             output t nil))
+             "<table\\b" "<div class=\"table-scroll\"><table" output t t))
+      (setq output
+            (replace-regexp-in-string
+             "</table>" "</table></div>" output t t))
       output)))
 
 (add-to-list 'org-export-filter-final-output-functions
