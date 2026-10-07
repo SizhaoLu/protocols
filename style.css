@@ -67,6 +67,15 @@ body.layout-wide #content {
   margin-right: auto;
 }
 
+/* On explicit wide pages, left-align prose with the left edge of the
+   tables instead of centering it. (Must stay after the rule above.) */
+body.layout-wide #content > :not(.table-scroll):not(#table-of-contents):not([class^="outline-"]),
+body.layout-wide [id^="outline-container-"] > :not(.table-scroll):not([class^="outline-"]),
+body.layout-wide [class^="outline-text-"] > :not(.table-scroll):not([class^="outline-"]) {
+  margin-left: 0;
+  margin-right: auto;
+}
+
 /* ---- Site header ---- */
 .site-header {
   position: sticky;
