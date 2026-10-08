@@ -1,49 +1,77 @@
 #+OPTIONS: toc:nil
 #+TITLE: Western blotting
-* Protein Lysate Preparation
-- Make sure centrifuge is at 4 °C before starting
-- Wash cells twice with cold 1x PBS
-- Lysis buffer
-  - mPER (Thermo Scientific 78501) with supplement protease inhibitor
-    and phosphatase inhibitor (100x stocks in DMSO).
-  - Better results might be achieved with RIPA for nuclear proteins.
+* Materials/Equipment
+  - Centrifuge cooled to 4℃
+  - TissueLyser LT (Qiagen)
+  - Sonicator (Branson digital sonifier)
+  - BioRad Mini Protein Gel system
+* Reagents
+- RIPA Lysis buffer
+| Component        | Stock Conc (mM or %) | Final Conc (mM or %) | Vol (mL) |
+|------------------+----------------------+----------------------+----------|
+| Tris pH 7.4      |                 1000 |                   50 |      2.5 |
+| NaCl             |                 5000 |                  150 |      1.5 |
+| IGEPAL CA-630    |                  10% |                   1% |        5 |
+| Deoxycholic acid |                   5% |                0.50% |      2.5 |
+| SDS              |                  10% |                0.10% |      0.5 |
+| H2O              |                      |                      |       38 |
+  
+#+begin_note
+- 5mL Aliquots can be saved at -20 ℃
+- Supplement with protease inhibitor and phosphatase inhibitor before use.
+#+end_note
 
-** RIPA buffer
+* Procedures
+1. Protein lysate prep
+   - Lysis buffer volume
+     | Tissue/cell                | Vol (μL) |
+     |----------------------------+----------|
+     | 60 mm dish                 |  100-200 |
+     | 100 mm dish                |  300-500 |
+     | Kidney tissue 15-30 mg^{*} |  300-500 |
+     * About 1/5 to 1/10 of a whole kidney
+   - For cell culture: scrape cells off the plate in lysis buffer
+   - For kidney tissue: use TissueLyser LT
+     1) Place 2 ml microcentrifuge tubes containing 1 stainless steel
+	bead (5 mm mean diameter) on dry ice for at least 15 min.
+     2) Transfer tissue piece to the tube and incubate on dry ice for 15 min
+     3) Put the tube into the TissueLyser Adapter, incubate for 2 min at RT.
+     4) Add lysis buffer (with inhibitors added) to the tube.
+     5) Operate at 50Hz for 1 min (Add additional 1 min cycle as
+	needed, let the tube rest on ice between cycles)
+   - Sonicate the samples at 10% amplitude for 5 sec
+   - Centrifuge the lysate at 14,000 RPM (add RCF) for 10 min at 4 ℃
+   - Collect supernatant.
+     #+begin_note
+     - Measure protein concentration now will making running gel easier.
+     - Detergent in RIPA interferes with BradFord, dilute the sample at least 10x for measurement. 
+     - Bradford Assay is generally performed with 96-well plate
+       (transparent ELISA plates for measuring absorbance)
+     - Prepare standard with BSA (dissolve in lysis buffer) ranging
+       from 2 mg/mL to 0.25 mg/mL in 1:10 diluted RIPA.
+     - Use 18 uL H2O, 2 uL of lysate/standard plus 180 uL 1x bradford solution.
+     - Measure absorbance at 600 nm.
+     - Optional but recommended: bring the samples to similar
+       concentrations for more accurate loading
+     #+end_note
+     #+begin_warning
+     Keep lysis buffer and lysate cold at all times
+     #+end_warning
+2. SDS-PAGE and Sample Preparation
+   - Prepare resolving gel of suitable percentage (see [[Polyacrylamide gel][recipe]])
+   - layer on top with about 1ml of EtOH to make the gel form a sharp
+     line when it polymerizes (takes about 20-30 min).
+   - Pour out the ethanol and rinse with milli-Q water. Dry with paper
+     towel.
+   - Pour the stacking gel (see [[Polyacrylamide gel][recipe]]) and let it sit at least 30 min
+     before taking the comb out.
+3. If protein amount is not known, Bradford Assay can be done when the gel is polymerizing.
 
-| Component          | Stock Conc (mM or %) | Final Conc (mM or %) | Vol (mL) |
-|---------------------+-----------------------+-----------------------+----------|
-| Tris pH 7.4         |                  1000 |                    50 |      2.5 |
-| NaCl                |                  5000 |                   150 |      1.5 |
-| IGEPAL CA-630       |                   10% |                    1% |        5 |
-| Deoxycholic acid    |                    5% |                 0.50% |      2.5 |
-| SDS                 |                   10% |                 0.10% |      0.5 |
-| H2O                 |                       |                       |       38 |
-
-- Use 100-200 uL of lysis buffer for cells in 60 mm dish.
-- Use 300-500 uL of lysis buffer for cells in 100 mm dish
-- With lysis buffer added in the dish, scrape the cell off and move to EP tube.
-
-- Keep lysate cold at all times
-
-- Sonicate at 10% amplitude for 5 sec.
-- Incubate on ice for 10 min.
-- Centrifuge for 10 min at 14,000 RPM at 4 °C.
-- Aliquot the prepared lysate (~45 μL)
-
-* Gel and Sample Preparation
-
-- Pour gel of suitable percentage based on recipe (see [[Polyacrylamide gel]])
-- After pouring bottom gel (resolving) layer it with about 1ml of EtOH to get a sharp line when it polymerizes (takes about 20-30 min). Pour out the ethanol and wash it off with milli-Q water. Pour the stacking gel and let it sit at least 30 min before taking the comb out.
-- If protein amount is not known, do Bradford Assay with the samples to be loaded. Preferably, the protein concentration should be determined during lysate preparation. Measurements performed in different batches might not be directly comparable.
-  - Bradford Assay is generally performed with 96-well plate (transparent for measuring absorbance)
-  - Prepare standard with BSA (dissolve in lysis buffer) ranging from 2 mg/mL to 0.25 mg/mL.
-  - Use 18 uL H2O, 2 uL of lysate/standard plus 180 uL 1x bradford solution.
-  - Measure absorbance at 600 nm.
-- Calculate prepare lysate using excel template. Keep lysate on ice during the preparation
-- Boil lysate for 5min after adding DTT (1M stock) and sample buffer
-- During this time, set up the gel using 1x running buffer
-- Load 8-10 ul of protein ladder.
-- After samples are loaded, run the gel first at 80 V. After samples reach resolving (bottom) gel part, turn it up to 120 V until done.
+4. Calculate prepare lysate using excel template. Keep lysate on ice during the preparation
+5. Boil lysate for 5min after adding DTT (1M stock) and sample buffer
+6. During this time, set up the gel using 1x running buffer
+7. Load 8-10 ul of protein ladder.
+8. After samples are loaded, run the gel first at 80 V. After samples reach resolving (bottom) gel part, turn it up to 120 V until done.
 
 * Semi-Dry Transfer
 
@@ -80,9 +108,9 @@
 | 926-32211 | Goat | Rabbit | IRDye® 800CW | 1:10,000 |
 | 926-68071 | Goat | Rabbit | IRDye® 680RD | 1:5,000  |
 
-#+begin_quote
+#+begin_note
 It is generally recommended that the IRDye 800CW secondary antibody (800 nm channel) be used to detect the lower-abundance protein target and IRDye 680RD secondary antibody (700nm) to detect the more abundant protein
-#+end_quote
+#+end_note
 
 - Alternatively, HRP conjugated secondaries are available for chemiluminescence detection.
 

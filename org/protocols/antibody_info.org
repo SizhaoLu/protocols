@@ -41,18 +41,18 @@
 | Arg2       | Abcam          | ab228700   | Rabbit             | Polyclonal | HM         | None         |     1:50 | -20 BoxII  |                                                   |
 | C-MYC      | Proteintech    | 67447-1-Ig | Mouse IgG1         | 3D9C12     | HMR        | None         |     1:50 | -20 BoxII  | Does not work for FFPE with IF; IHC works at 1:50 |
 | αSMA       | Invitrogen     | 14-9760-82 | Mouse IgG2a, kappa | 1A4        | HMR        | None         |    1:500 | Fridge     |                                                   |
-| Sox9       | Millipore      | AB5535     | Rabbit             | Polyclonal | HMR        | None         |    1:250 | Fridge     | In test                                           |
+| Sox9       | Millipore      | AB5535     | Rabbit             | Polyclonal | HMR        | None         |    1:250 | Fridge     | Did not work                                      |
 | PCNA       | Cell Signaling | 2586       | Mouse IgG2a        | PC10       | HMR        | None         |    1:800 | -20        |                                                   |
-| Kim1       | Invitrogen     | MA5-28211  | Rat IgG2a          | RMT1-10    | HM         | None         |          | not found  | In test. 1:50 and 1:200                           |
+| Kim1       | Invitrogen     | MA5-28211  | Rat IgG2a          | RMT1-10    | HM         | None         |          | Fridge     | Did not work                                      |
 | DBA        | Vector Lab     | B-1035     | Lectin (GalNAc)    | N/A        | N/A        | Biotinylated |    1:200 | -20 lectin |                                                   |
 | LTA        | Vector Lab     | B-1325     | Lectin             | N/A        | N/A        | Biotinylated |    1:100 | -20 lectin | in test                                           |
 | PNA        | Vector Lab     | B-1075     | Lectin             | N/A        | N/A        | Biotinylated |    1:200 | -20 lectin | in test                                           |
 
+Specificity abbreviations: H = human, M = mouse, R = rat.
 * For western blot
 :PROPERTIES:
 :CUSTOM_ID: western-blot
 :END:
-* Antibodies dilution reference
 | Antibody                  | Company        | Cat#        | Host   | Clone      | MW         | Dilution      | notes                          |
 |----------------------------+----------------+-------------+--------+------------+------------+---------------+---------------------------------|
 | Anti-β-Actin               | Sigma          | A5441       | Mouse  | AC-15      | 42 kDa     | 1:60000       |                                 |
@@ -80,4 +80,4 @@
 | Anti-STAT3                 | Cell Signaling | 4904        | Rabbit | 79D7       | 79, 86kDa  | 1:2000        |                                 |
 | Anti-STAT1                 | Cell Signaling | 9172        | Rabbit | Polyclonal | 84, 91kDa  | 1:1000        |                                 |
 
-Specificity abbreviations: H = human, M = mouse, R = rat.
+
