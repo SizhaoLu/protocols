@@ -43,7 +43,7 @@
    - Centrifuge the lysate at 14,000 RPM (add RCF) for 10 min at 4 ℃
    - Collect supernatant.
      #+begin_note
-     - Measure protein concentration now will making running gel easier.
+     - Measure protein concentration now will following steps easier.
      - Detergent in RIPA interferes with BradFord, dilute the sample at least 10x for measurement. 
      - Bradford Assay is generally performed with 96-well plate
        (transparent ELISA plates for measuring absorbance)
@@ -59,72 +59,90 @@
      #+end_warning
 2. SDS-PAGE and Sample Preparation
    - Prepare resolving gel of suitable percentage (see [[Polyacrylamide gel][recipe]])
-   - layer on top with about 1ml of EtOH to make the gel form a sharp
-     line when it polymerizes (takes about 20-30 min).
+   - layer on top with about 1ml of EtOH to make the interface between
+     resolving and stacking gel form a sharp line when it polymerizes
+     (takes about 20-30 min).
    - Pour out the ethanol and rinse with milli-Q water. Dry with paper
      towel.
    - Pour the stacking gel (see [[Polyacrylamide gel][recipe]]) and let it sit at least 30 min
      before taking the comb out.
-3. If protein amount is not known, Bradford Assay can be done when the gel is polymerizing.
+     #+begin_tip
+     - If protein amount is not known, Bradford Assay can be done when the gel is polymerizing.
+     - If protein is frozen, thaw on ice when preparing gel
+     - Standard loading vol for 1.5mm 10-well gel 20 µL
+     - Boil lysate for 5min after adding DTT (1M stock) and sample buffer
+     - During this time, set up the gel using 1x running buffer
+     #+end_tip
+   - Load 8-10 ul of protein ladder.
+   - After samples are loaded, run the gel first at 80 V. After
+     samples reach resolving (bottom) gel part, turn it up to 120 V
+     until done.
+     #+begin_tip
+     - Make sure that the loading dye runs out at the bottom
+     - Run gel 
+     #+end_tip
+3. Semi-Dry Transfer
+   - During the gel run, prepare the transfer buffer.
+   - Cut a PVDF membrane out (9.5 cm by 5cm) and notch the right hand
+     corner and write on the right hand corner in pencil (helps remind
+     what side the protein is on). Written side of the membrane will
+     face the SDS-gel.
+   - Place membrane in methanol for 5 min. Balance the membrane in 1x
+     transfer buffer.
+     #+begin_note
+     - *PVDF membrane is hydrophobic. Make sure to soak in methanol first.*
+     #+end_note
+   - soak two (for each gel) thick filter paper in transfer buffer.
+   - Take gel out of apparatus and cut off the stacking. Cut a notch
+     on the top left-hand corner.
+   - Balance the gel in 1x transfer buffer for 5-10 min. Careful not to flip the gel.
+   - Assemble the transfer sandwich in the transfer instrument, in the order below (bottom to top).
+     1. Thick filter paper
+     2. PVDF (writing facing up, cut and writing on the top right corner)
+     3. Gel (flip up side down, the cut corner on top right, align with the cut on the membrane)
+     4. Thick filter paper
+   - Roll out bubbles.
+   - Cover the lid for the instrument. Transfer at 15v for 30 min. Time can be extended for larger protein.
 
-4. Calculate prepare lysate using excel template. Keep lysate on ice during the preparation
-5. Boil lysate for 5min after adding DTT (1M stock) and sample buffer
-6. During this time, set up the gel using 1x running buffer
-7. Load 8-10 ul of protein ladder.
-8. After samples are loaded, run the gel first at 80 V. After samples reach resolving (bottom) gel part, turn it up to 120 V until done.
+4. Blocking and antibody incubations
+   - Following transfer, wash the membrane in [[10x TBS][1x TBS]] for 5 to 10 minutes with gentle agitation at room temperature twice.
+   - Place membrane carefully in [[Blocking buffer]]. Gently agitate the solution and incubate for 1 hour at RT.
+   - Incubate with primary antibody (see [[file:antibody_info.org::#western-blot][Antibody dilution information]]) overnight at 4 °C.
+     #+begin_note
+     - 6 mL of diluted antibody is needed if plastic pouch is used.
+     #+end_note
 
-* Semi-Dry Transfer
+   - Next morning, wash the membrane four times with TBST for 5 min
+   - Second antibody incubation – Prepare secondary antibody solution as follows:
+   - Odyssey secondaries can be used for detecting two (or more)
+     proteins on the same blot
+     |      Cat# | Host | Target | Conjugation  | Dilution |
+     |-----------+------+--------+--------------+----------|
+     | 926-32210 | Goat | Mouse  | IRDye® 800CW | 1:10,000 |
+     | 926-68070 | Goat | Mouse  | IRDye® 680RD | 1:5,000  |
+     | 926-32211 | Goat | Rabbit | IRDye® 800CW | 1:10,000 |
+     | 926-68071 | Goat | Rabbit | IRDye® 680RD | 1:5,000  |
 
-- During the gel run, prepare the transfer buffer.
-- Cut a PVDF membrane out (9.5 cm by 5cm) and notch the right hand corner and write on the right hand corner in pencil (helps remind what side the protein is on). Written side of the membrane will face the SDS-gel.
-- Place membrane in methanol for 5 min. Balance the membrane in 1x transfer buffer.
-- *PVDF membrane is hydrophobic. Make sure to soak in methanol first.*
-- Cut (match gel and membrane size) and soak two (for each gel) thick filter paper in transfer buffer.
-- Take gel out of apparatus and cut off the stacking. Cut a notch on the top left-hand corner.
-- Balance the gel in 1x transfer buffer for 5-10 min. Careful not to flip the membrane.
-- Assemble the transfer sandwich in the transfer instrument, in the order below (bottom to top).
-  - Thick filter paper
-  - PVDF (writing facing up, cut and writing on the top right corner)
-  - Gel (flip up side down, the cut corner on top right, align with the cut on the membrane)
-  - Thick filter paper
-- Roll out bubbles.
-- Cover the lid for the instrument. Transfer at 15v for 30 min. Time can be extended for larger protein.
+    #+begin_note
+    - It is generally recommended that the IRDye 800CW secondary
+      antibody (800 nm channel) be used to detect the lower-abundance
+      protein target and IRDye 680RD secondary antibody (700nm) to
+      detect the more abundant protein
+    #+end_note
 
-* Blocking and antibody incubations
+     - Alternatively, HRP conjugated secondaries are available for chemiluminescence detection.
+       | Name                 | Company        | Cat#        | Host   | Dilution |
+       |----------------------+----------------+-------------+--------+----------|
+       | Goat Anti-Mouse HRP  | jacksonimmuno  | 115-035-003 | Goat   |  1:10000 |
+       | Goat Anti-rabbit HRP | Cell Signaling | #7074       | Goat   |   1:2000 |
+       | Donkey Anti-Goat HRP | Novex          | A16005      | Donkey |   1:5000 |
 
-- Following transfer, wash the membrane in 1x [[10x TBS]] for 5 to 10 minutes with gentle agitation at room temperature twice.
-- Place membrane carefully in [[Blocking buffer]]. Gently agitate the solution and incubate for 1 hour at RT.
-- Incubate with primary antibody (see [[file:antibody_info.org::#western-blot][Antibody dilution information]]) overnight at 4 °C.
-- 6 mL of diluted antibody is needed if plastic pouch is used.
-
-- Next morning, wash the membrane four times with TBST for 5 min
-- Second antibody incubation – Prepare secondary antibody solution as follows:
-  - Odyssey secondaries can be used for detecting two (or more) proteins on the same blot
-
-| Cat#      | Host | Target | Conjugation  | Dilution |
-|-----------+------+--------+--------------+----------|
-| 926-32210 | Goat | Mouse  | IRDye® 800CW | 1:10,000 |
-| 926-68070 | Goat | Mouse  | IRDye® 680RD | 1:5,000  |
-| 926-32211 | Goat | Rabbit | IRDye® 800CW | 1:10,000 |
-| 926-68071 | Goat | Rabbit | IRDye® 680RD | 1:5,000  |
-
-#+begin_note
-It is generally recommended that the IRDye 800CW secondary antibody (800 nm channel) be used to detect the lower-abundance protein target and IRDye 680RD secondary antibody (700nm) to detect the more abundant protein
-#+end_note
-
-- Alternatively, HRP conjugated secondaries are available for chemiluminescence detection.
-
-| Name                 | Company        | Cat#        | Host   | Dilution |
-|----------------------+----------------+-------------+--------+----------|
-| Goat Anti-Mouse HRP  | jacksonimmuno  | 115-035-003 | Goat   | 1:10000  |
-| Goat Anti-rabbit HRP | Cell Signaling | #7074       | Goat   | 1:2000   |
-| Donkey Anti-Goat HRP | Novex          | A16005      | Donkey | 1:5000   |
-
-- Incubate at room temperature for 1 hour with agitation. Protect from light
-- Washes
-  - Wash four times with TBST for 5 min
-  - Rinse the membrane with TBS briefly to remove residual Tween 20.
-- Imaging with LI-COR Odyssey XF system.
+     - Incubate at room temperature for 1 hour with agitation. Protect from light
+     - Washes
+       1) Wash four times with TBST for 5 min
+       2) Rinse the membrane with TBS briefly to remove residual Tween 20.
+5. Imaging with LI-COR Odyssey XF system.
+   - Start with 10 min
 
 * Recipes for gels and buffers
 
