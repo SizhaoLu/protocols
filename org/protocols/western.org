@@ -16,10 +16,10 @@
 | SDS              |                  10% |                0.10% |      0.5 |
 | H2O              |                      |                      |       38 |
   
-#+begin_note
+#+begin_tip
 - 5mL Aliquots can be saved at -20 ℃
 - Supplement with protease inhibitor and phosphatase inhibitor before use.
-#+end_note
+#+end_tip
 
 * Procedures
 1. Protein lysate prep
@@ -158,23 +158,23 @@
 | TEMED (uL)                   |       10 |              20 |             20 |             20 |
 | 10% APS (uL)                 |      100 |              64 |             64 |             64 |
 
-#+begin_quote
+#+begin_note
 This calculation is enough for 2 gels with 1.5mm spacer.
 10% APS is aliquoted in 200 uL and kept at -20 °C for 6-9 months.
-#+end_quote
+#+end_note
 
 ** 10x running buffer
 
-| Reagents | Concentration | Weight |
-|----------+----------------+--------|
-| glycine  | 192 mM         | 72g    |
-| Tris     | 25 mM          | 15.15g |
-| SDS      | 1%             | 5g     |
-| H2O      |                | 500 mL |
+| Reagents | Concentration | Weight | Weight  |
+|----------+---------------+--------+---------|
+| glycine  | 192 mM        | 72.2g  | 144.4g  |
+| Tris     | 25 mM         | 15.15g | 30.3    |
+| SDS      | 1%            | 5g     | 10g     |
+| H2O      |               | 500 mL | 1000 mL |
 
-#+begin_quote
+#+begin_note
 pH of the 10x running buffer should be 8.3 and no pH adjustment is required. Store the running buffer at room temperature and dilute to 1X before use.
-#+end_quote
+#+end_note
 
 ** 10x transfer buffer (Bjerrum Schafer-Nielsen)
 
@@ -184,9 +184,9 @@ pH of the 10x running buffer should be 8.3 and no pH adjustment is required. Sto
 | Tris     | 48 mM          | 58.2g   |
 | H2O      |                | 1000 mL |
 
-#+begin_quote
+#+begin_note
 pH for transfer buffer should be ~9.2. Do NOT add acid or base to adjust pH. For 1x buffer, add 100mL of 10x stock, 200 mL of Methanol to 700 mL of H2O
-#+end_quote
+#+end_note
 
 ** 10x TBS
 
@@ -197,9 +197,9 @@ pH for transfer buffer should be ~9.2. Do NOT add acid or base to adjust pH. For
 | NaCl     | 88g    |
 | H2O      | to 1L  |
 
-#+begin_quote
+#+begin_note
 PH should be around 7.6 (no need to adjust pH). Add Tween-20 to 0.2% in 1x TBS for TBST
-#+end_quote
+#+end_note
 
 ** Blocking buffer
 
