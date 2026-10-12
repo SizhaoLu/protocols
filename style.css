@@ -309,26 +309,107 @@ img {
    ...
    #+end_note
 
+   #+begin_tip
+   ...
+   #+end_tip
+
    #+begin_warning
    ...
    #+end_warning
 */
 .note,
-.warning,
+.tip,
+.warning {
+  position: relative;
+  margin: 1.6rem 0;
+  padding: 1rem 1.1rem 1rem 1.15rem;
+  border: 1px solid var(--rule);
+  border-left-width: 5px;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px color-mix(in srgb, var(--ink) 7%, transparent);
+}
+
+.note {
+  --callout-color: #5b7896;
+  border-left-color: var(--callout-color);
+  background: color-mix(in srgb, var(--callout-color) 10%, var(--paper-raised));
+}
+
 .tip {
-  margin: 1.5rem 0;
-  padding: 0.9rem 1rem;
-  border-left: 4px solid var(--accent);
-  background: var(--code-bg);
-  border-radius: 0 6px 6px 0;
+  --callout-color: #637b55;
+  border-left-color: var(--callout-color);
+  background: color-mix(in srgb, var(--callout-color) 11%, var(--paper-raised));
 }
 
 .warning {
-  border-left-color: #9a6545;
+  --callout-color: #a5643f;
+  border-left-color: var(--callout-color);
+  background: color-mix(in srgb, var(--callout-color) 11%, var(--paper-raised));
 }
 
-.tip {
-  border-left-color: #637b55;
+/* Icon + semantic label */
+.note::before,
+.tip::before,
+.warning::before {
+  display: block;
+  margin-bottom: 0.45rem;
+  color: var(--callout-color);
+  font-family: "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.note::before {
+  content: "ℹ  Note";
+}
+
+.tip::before {
+  content: "💡  Tip";
+}
+
+.warning::before {
+  content: "⚠  Warning";
+}
+
+/* Keep the block contents compact. */
+.note > :first-child,
+.tip > :first-child,
+.warning > :first-child {
+  margin-top: 0;
+}
+
+.note > :last-child,
+.tip > :last-child,
+.warning > :last-child {
+  margin-bottom: 0;
+}
+
+/* Slightly stronger semantic colors in dark mode. */
+:root[data-theme="dark"] .note {
+  --callout-color: #8fb4d8;
+}
+
+:root[data-theme="dark"] .tip {
+  --callout-color: #a6c58d;
+}
+
+:root[data-theme="dark"] .warning {
+  --callout-color: #e0a074;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) .note {
+    --callout-color: #8fb4d8;
+  }
+
+  :root:not([data-theme]) .tip {
+    --callout-color: #a6c58d;
+  }
+
+  :root:not([data-theme]) .warning {
+    --callout-color: #e0a074;
+  }
 }
 
 /* ---- Sitemap pages ---- */
