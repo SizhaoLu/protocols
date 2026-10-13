@@ -77,7 +77,7 @@
      (takes about 20-30 min).
    - Pour out the ethanol and rinse with milli-Q water. Dry with paper
      towel. Take care not to disrupt the interface.
-   - Pour the stacking gel (see [[<polyacrylamide-gel>][recipe]]) and let it sit at least 30 min
+   - Pour the stacking gel (see [[polyacrylamide-gel][recipe]]) and let it sit at least 30 min
      before taking the comb out.
      #+begin_tip
      - If protein amount is not known, Bradford Assay can be done when the gel is polymerizing.
@@ -118,8 +118,8 @@
    - Cover the lid for the instrument. Transfer at 15v for 30 min. Time can be extended for larger protein.
 
 4. Blocking and antibody incubations
-   - Following transfer, wash the membrane in [[10x TBS][1x TBS]] for 5 to 10 minutes with gentle agitation at room temperature twice.
-   - Place membrane carefully in [[Blocking buffer]]. Gently agitate the solution and incubate for 1 hour at RT.
+   - Following transfer, wash the membrane in [[tbs-10x][1x TBS]] for 5 to 10 minutes with gentle agitation at room temperature twice.
+   - Place membrane carefully in [[blocking-buffer][blocking buffer]]. Gently agitate the solution and incubate for 1 hour at RT.
    - Incubate with primary antibody (see [[file:antibody_info.org::#western-blot][Antibody dilution information]]) overnight at 4 °C.
      #+begin_note
      - 6 mL of diluted antibody is needed if plastic pouch is used.
@@ -164,7 +164,7 @@
 
 * Recipes for gels and buffers
 
-1. <<polyacrylamide-gel>>Polyacrylamide gel
+1) <<polyacrylamide-gel>>Polyacrylamide gel
    | Reagents                   | Stacking | Resolving 7.5% | Resolving 10% | Resolving 12% |
    |----------------------------+----------+----------------+---------------+---------------|
    | 30% Acrylamide/bis (mL)    |      1.3 |              5 |           6.6 |             8 |
@@ -180,7 +180,7 @@
    is aliquoted in 200 uL and kept at -20 °C for 6-9 months.
    #+end_note
 
-2. 10x running buffer
+2) 10x running buffer
    | Reagents | Concentration | Weight | Weight  |
    |----------+---------------+--------+---------|
    | glycine  | 192 mM        | 72.2g  | 144.4g  |
@@ -194,7 +194,7 @@
    to 1X before use.
    #+end_note
 
-3. 10x transfer buffer (Bjerrum Schafer-Nielsen)
+3) 10x transfer buffer (Bjerrum Schafer-Nielsen)
    | Reagents | Concentration | Weight  |
    |----------+---------------+---------|
    | glycine  | 39 mM         | 29.3g   |
@@ -207,7 +207,7 @@
    Methanol to 700 mL of H2O
    #+end_note
 
-4. 10x TBS
+4) <<tbs-10x>>10x TBS
    | Reagents | Weight |
    |----------+--------|
    | Tris-HCl | 24g    |
@@ -220,10 +220,10 @@
    0.2% in 1x TBS for TBST
    #+end_note
 
-5. Blocking buffer
+5) <<blocking-buffer>>Blocking buffer
    5% BSA in TBS
 
-6. Antibody buffer
+6) Antibody buffer
    Dilute blocking buffer 1:10 in TBST
 
 #+begin_note
