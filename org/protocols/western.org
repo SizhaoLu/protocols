@@ -19,6 +19,9 @@
 #+begin_tip
 - 5mL Aliquots can be saved at -20 ℃
 - Supplement with protease inhibitor and phosphatase inhibitor before use.
+  - Protease Inhibitor (100x, Thermo Scientific #1862209)
+  - Protease and Phosphatase Inhibitor (if analyzing phosphorylated
+    proteins, 100x, Thermo Scientific #1862495)
 #+end_tip
 
 * Procedures
@@ -28,8 +31,11 @@
      |----------------------------+----------|
      | 60 mm dish                 |  100-200 |
      | 100 mm dish                |  300-500 |
-     | Kidney tissue 15-30 mg^{*} |  300-500 |
-     * About 1/5 to 1/10 of a whole kidney
+     | Kidney tissue 15-30 mg     |  150-300 |
+     #+begin_tip
+     1) Use about 1/10 of a whole mouse kidney.
+     2) Rule of thumb: 10 μL of lysis buffer per 1mg of tissue.
+     #+end_tip
    - For cell culture: scrape cells off the plate in lysis buffer
    - For kidney tissue: use TissueLyser LT
      1) Place 2 ml microcentrifuge tubes containing 1 stainless steel
@@ -39,21 +45,21 @@
      4) Add lysis buffer (with inhibitors added) to the tube.
      5) Operate at 50Hz for 1 min (Add additional 1 min cycle as
 	needed, let the tube rest on ice between cycles)
-   - Sonicate the samples at 10% amplitude for 5 sec
-   - Centrifuge the lysate at 14,000 RPM (add RCF) for 10 min at 4 ℃
+   - Sonicate the samples briefly at 10% amplitude for 5 sec
+   - Centrifuge the lysate at 14,000 RPM (~ 18,000 RCF) for 10 min at 4 ℃
    - Collect supernatant.
-     #+begin_note
-     - Measure protein concentration now will following steps easier.
-     - Detergent in RIPA interferes with BradFord, dilute the sample at least 10x for measurement. 
-     - Bradford Assay is generally performed with 96-well plate
-       (transparent ELISA plates for measuring absorbance)
-     - Prepare standard with BSA (dissolve in lysis buffer) ranging
-       from 2 mg/mL to 0.25 mg/mL in 1:10 diluted RIPA.
-     - Use 18 uL H2O, 2 uL of lysate/standard plus 180 uL 1x bradford solution.
-     - Measure absorbance at 600 nm.
-     - Optional but recommended: bring the samples to similar
-       concentrations for more accurate loading
-     #+end_note
+     #+begin_tip
+     1) Measure protein concentration now will following steps easier.
+     2) Detergent in RIPA interferes with BradFord, dilute the sample at least 10x for measurement. 
+     3) Bradford Assay is generally performed with 96-well plate
+	(transparent ELISA plates for measuring absorbance)
+     4) Prepare standard with BSA (dissolve in lysis buffer) ranging
+	from 2 mg/mL to 0.25 mg/mL in 1:10 diluted RIPA.
+     5) Use 18 uL H2O, 2 uL of lysate/standard plus 180 uL 1x bradford solution.
+     6) Measure absorbance at 600 nm.
+     7) Optional but recommended: bring the samples to similar
+	concentrations for more accurate loading
+     #+end_tip
      #+begin_warning
      Keep lysis buffer and lysate cold at all times
      #+end_warning
