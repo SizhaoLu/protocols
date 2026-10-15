@@ -92,7 +92,8 @@
      until done.
      #+begin_tip
      - Make sure that the loading dye runs out at the bottom
-     - Run gel 
+     - [[https://www.bio-rad.com/en-us/sku/1610375-precision-plus-protein-kaleidoscope-prestained-protein-standards?ID=1610375][Bio-Rad Kaleidoscope Standards #1610375]]
+     - [[https://www.bio-rad.com/en-us/sku/1610374-precision-plus-protein-dual-color-standards-500-ul?ID=1610374][Precision Plus Dual Color Standards #1610374]]
      #+end_tip
 3. Semi-Dry Transfer
    - During the gel run, prepare the transfer buffer.
