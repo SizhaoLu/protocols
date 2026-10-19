@@ -63,6 +63,10 @@
      3) Low Pressure [106-110⁰C] 25 minutes
      4) Fully release pressure, remove slides
      5) Cool to touch (10–20 min) before proceeding
+     #+begin_tip
+     If lower temperature is needed, the pressure valve can be left
+     open where it functions as a steamer
+     #+end_tip
 
 5. Glycine Quench (reduce autofluorescence from fixation)
    - 0.1M glycine in PBS-T 
@@ -79,7 +83,9 @@
     with a KimWipe (avoid touching tissue)
    - Incubate in Blocking buffer for 2hrs at RT in a humidified
      chamber (check periodically to ensure buffer hasn't evaporated)
-
+     #+begin_tip
+     Blocking step can be as short as 1 hour and as long as overnight
+     #+end_tip
 8. Primary Antibody
    - Dilute primary antibodies in blocking buffer at optimized concentrations for your targets
    - Incubate overnight at 4°C in a humidified chamber
