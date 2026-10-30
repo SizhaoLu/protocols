@@ -18,7 +18,14 @@
   - PBS (Phosphate-Buffered Saline)
   - PBS-T (PBS + 0.1% Tween-20; 2mL in 2L)
   - PBS-Triton X-100 (PBS + 0.1% Triton X-100; 2mL in 2L)
-  - Antigen unmasking solution (vector #H-3300)
+  - Antigen unmasking solution: Citric Acid pH6.0 (vector #H-3300)
+  - Tris-EDTA Buffer pH 9.0 (10mM Tris Base, 1mM EDTA Solution,
+      0.05% Tween20)
+    1) 1.21g Tris Base
+    2) 0.37g EDTA
+    3) 0.5 mL Tween 20
+    4) 1L H2O.
+    5) No need to adjust pH. Store at 4 degree, 1x solution ready for use.
   - 0.1M Glycine in PBS-T (0.751 g glycine per 100 mL PBS-T)
   - Sudan Black B (Sigma 199664-25G)
   - 5% BSA in PBS-T (2g in 40 mL)
@@ -58,14 +65,16 @@
      1:100 in DI H2O, in clear plastic container (do not use glass
      container). Need 200 mL in plastic tank.
    - Pressure cooker setup (BioSB)
-     1) Fill base of pressure cooker with DI H2O to just cover the bottom of slide containers
+     1) Fill base of pressure cooker with DI H2O to just cover the
+        bottom of slide containers
      2) Close lid, pressure valve *closed*
      3) Low Pressure [106-110⁰C] 25 minutes
      4) Fully release pressure, remove slides
      5) Cool to touch (10–20 min) before proceeding
      #+begin_tip
      If lower temperature is needed, the pressure valve can be left
-     open where it functions as a steamer
+     open where it functions as a steamer. 20-40 min time
+     recomended for Tris-retrieval.Add enough water.
      #+end_tip
 
 5. Glycine Quench (reduce autofluorescence from fixation)
