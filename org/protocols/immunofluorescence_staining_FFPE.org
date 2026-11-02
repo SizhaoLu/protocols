@@ -72,9 +72,13 @@
      4) Fully release pressure, remove slides
      5) Cool to touch (10–20 min) before proceeding
      #+begin_tip
-     If lower temperature is needed, the pressure valve can be left
-     open where it functions as a steamer. 20-40 min time
-     recomended for Tris-retrieval.Add enough water.
+     If a lower temperature is needed, leave the pressure valve open
+     and set the temperature to 100 ℃ so the cooker works as a
+     steamer. At Denver’s altitude it reaches only about 95 ℃. Because
+     it never reaches 100 ℃, the timer won’t start automatically, so
+     start it manually once the display reads 95 ℃. For Tris
+     retrieval, 20-40 min is recommended. Add enough water so the pot
+     doesn’t boil dry.
      #+end_tip
 
 5. Glycine Quench (reduce autofluorescence from fixation)
