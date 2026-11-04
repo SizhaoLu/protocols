@@ -79,7 +79,7 @@ Specificity abbreviations: H = human, M = mouse, R = rat.
 | Anti-pSTAT1(Tyr701)       | Cell Signaling | 9167      | Rabbit | Polyclonal | 84, 91kDa          |   1:1000 |                                                          |
 | Anti-STAT3                | Cell Signaling | 4904      | Rabbit | 79D7       | 79, 86kDa          |   1:2000 |                                                          |
 | Anti-STAT1                | Cell Signaling | 9172      | Rabbit | Polyclonal | 84, 91kDa          |   1:1000 |                                                          |
-| Anti-C5                   | Abcam          | ab11898   | Rabbit | Polyclonal | 10, 74, 118/107kDa |          | size corresponds to C5a, C5ϐ, C5α chain (PMID: 35105928) |
+| Anti-C5                   | Abcam          | ab11898   | Rabbit | Polyclonal | 10, 74, 118/107kDa |     1:50 | size corresponds to C5a, C5ϐ, C5α chain (PMID: 35105928) |
 | Anti-C3                   | Santa Cruz     | sc-28294  | mouse  | B-9        | 10, 74, 118/107kDa |    1:200 | Could show additional bands: iC3b (~50 kDa) etc.         |
 
 
