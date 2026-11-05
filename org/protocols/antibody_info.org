@@ -41,7 +41,7 @@
 | Arg2       | Abcam          | ab228700   | Rabbit             | Polyclonal | HM         | None         |     1:50 | -20 BoxII  |                                                   |
 | C-MYC      | Proteintech    | 67447-1-Ig | Mouse IgG1         | 3D9C12     | HMR        | None         |     1:50 | -20 BoxII  | Does not work for FFPE with IF; IHC works at 1:50 |
 | αSMA       | Invitrogen     | 14-9760-82 | Mouse IgG2a, kappa | 1A4        | HMR        | None         |    1:500 | Fridge     |                                                   |
-| Sox9       | Millipore      | AB5535     | Rabbit             | Polyclonal | HMR        | None         |    1:250 | Fridge     | Did not work                                      |
+| Sox9       | Millipore      | AB5535     | Rabbit             | Polyclonal | HMR        | None         |    1:100 | Fridge     | Required Tris-EDTA AR (25min, 95 ℃)               |
 | PCNA       | Cell Signaling | 2586       | Mouse IgG2a        | PC10       | HMR        | None         |    1:800 | -20        |                                                   |
 | Kim1       | Invitrogen     | MA5-28211  | Rat IgG2a          | RMT1-10    | HM         | None         |          | Fridge     | Did not work                                      |
 | DBA        | Vector Lab     | B-1035     | Lectin (GalNAc)    | N/A        | N/A        | Biotinylated |    1:200 | -20 lectin |                                                   |
